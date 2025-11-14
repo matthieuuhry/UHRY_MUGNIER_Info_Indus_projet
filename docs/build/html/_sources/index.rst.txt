@@ -6,12 +6,14 @@
 UHRY_MUGNIER_Info_Indus_projet documentation
 ============================================
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
-
+*******************
+Table des matières
+*******************
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 3
+   :caption: Informatique Industrielle & ROS2
 
+   c0_intro/001_index
+
+ 
