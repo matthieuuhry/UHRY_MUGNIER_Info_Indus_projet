@@ -1,0 +1,218 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le langage Sphinx &mdash; Documentation UHRY_MUGNIER_Info_Indus_projet 1</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a12a2fe1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=e6b791cb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Télécharger une VM sur Mac" href="vm_mac.html" />
+    <link rel="prev" title="Presentation du projet" href="projet_explication.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            UHRY_MUGNIER_Info_Indus_projet
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Informatique Industrielle &amp; ROS2</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">Introduction</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="projet_explication.html">Presentation du projet</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Le langage Sphinx</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#quest-ce-que-sphinx">Qu’est-ce que Sphinx ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fonctionnement">Fonctionnement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#principales-fonctionnalites">Principales fonctionnalités</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pourquoi-utiliser-sphinx">Pourquoi utiliser Sphinx ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exemple-d-organisation-du-sommaire">Exemple d’organisation du sommaire :</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exemple-de-syntaxe-restructuredtext">Exemple de syntaxe reStructuredText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extensions-populaires">Extensions populaires</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ressources-complementaires">Ressources complémentaires</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#en-resume">En résumé</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vm_mac.html">Télécharger une VM sur Mac</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../realisation.html">Réalisation du projet</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">UHRY_MUGNIER_Info_Indus_projet</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../introduction.html">Introduction</a></li>
+      <li class="breadcrumb-item active">Le langage Sphinx</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/introduction/sphinx_langage.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="le-langage-sphinx">
+<h1>Le langage Sphinx<a class="headerlink" href="#le-langage-sphinx" title="Lien vers cette rubrique"></a></h1>
+<p>Sphinx est un générateur de documentation puissant, principalement utilisé dans l’écosystème Python et pour tout projet technique nécessitant une documentation structurée, lisible sur le web ou au format PDF.</p>
+<section id="quest-ce-que-sphinx">
+<h2>Qu’est-ce que Sphinx ?<a class="headerlink" href="#quest-ce-que-sphinx" title="Lien vers cette rubrique"></a></h2>
+<p>Sphinx est un outil open source permettant de transformer des fichiers texte écrits en reStructuredText (ou Markdown, avec extensions) en pages HTML, PDF, LaTeX ou autres formats. Il est particulièrement populaire dans le monde du logiciel libre, pour la documentation de bibliothèques, modules ou projets complexes.</p>
+</section>
+<section id="fonctionnement">
+<h2>Fonctionnement<a class="headerlink" href="#fonctionnement" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p><strong>Entrée :</strong> des fichiers <cite>.rst</cite> (reStructuredText, syntaxe textuelle proche du Markdown mais plus puissante) organisés dans un dossier, plus un fichier de configuration <cite>conf.py</cite>.</p></li>
+<li><p><strong>Processus :</strong> tu organises ta documentation avec des “toctree” pour structurer la navigation, puis tu lances Sphinx pour générer automatiquement une arborescence HTML, PDF, etc.</p></li>
+<li><p><strong>Sortie :</strong> un site web statique et lisible, que tu peux héberger, partager ou versionner.</p></li>
+</ul>
+</section>
+<section id="principales-fonctionnalites">
+<h2>Principales fonctionnalités<a class="headerlink" href="#principales-fonctionnalites" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p>Arbres de navigation automatiques (toctree)</p></li>
+<li><p>Possibilité d’écrire en français ou dans toute autre langue</p></li>
+<li><p>Index et tables des matières générés dynamiquement</p></li>
+<li><p>Support de la documentation API avec extraction automatique des docstrings (pour les projets Python)</p></li>
+<li><p>Thèmes personnalisés et extension facile avec de nombreux plugins (intégration de diagrammes, mathématiques, code exécuté, etc.)</p></li>
+<li><p>Export multi-format (HTML, PDF/LaTeX, EPUB…)</p></li>
+</ul>
+</section>
+<section id="pourquoi-utiliser-sphinx">
+<h2>Pourquoi utiliser Sphinx ?<a class="headerlink" href="#pourquoi-utiliser-sphinx" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p><strong>Standard de facto en Python</strong> (utilisé pour Python, NumPy, ROS, etc.)</p></li>
+<li><p>Versionnage et publication aisés (intégration avec GitHub Pages ou ReadTheDocs)</p></li>
+<li><p>Gestion avancée des références croisées (indices, liens internes)</p></li>
+<li><p>Adapté aussi pour les rapports de projet, guides techniques, TP/TD et même des livres entiers</p></li>
+</ul>
+</section>
+<section id="exemple-d-organisation-du-sommaire">
+<h2>Exemple d’organisation du sommaire :<a class="headerlink" href="#exemple-d-organisation-du-sommaire" title="Lien vers cette rubrique"></a></h2>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:maxdepth:</span> 2
+   <span class="nc">:caption:</span> Documentation du projet
+
+   introduction
+   realisation
+   conclusion
+</pre></div>
+</div>
+</section>
+<section id="exemple-de-syntaxe-restructuredtext">
+<h2>Exemple de syntaxe reStructuredText<a class="headerlink" href="#exemple-de-syntaxe-restructuredtext" title="Lien vers cette rubrique"></a></h2>
+<p>Un titre :</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">Titre principal</span>
+<span class="gh">===============</span>
+
+<span class="gh">Sous-titre</span>
+<span class="gh">----------</span>
+</pre></div>
+</div>
+<p>Une liste :</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">-</span> Premier point
+<span class="m">-</span> Second point
+</pre></div>
+</div>
+<p>Une note :</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ceci est une note informative mise en avant par Sphinx.</p>
+</div>
+<p>Un lien :</p>
+<p><a class="reference external" href="https://www.sphinx-doc.org/fr/master/">Documentation Sphinx</a></p>
+<p>Voir plus d’exemples :
+<a class="reference external" href="https://docutils.sourceforge.io/docs/user/rst/quickref.html">Syntaxe reStructuredText — Quick Reference</a></p>
+</section>
+<section id="extensions-populaires">
+<h2>Extensions populaires<a class="headerlink" href="#extensions-populaires" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://sphinx-rtd-theme.readthedocs.io/en/stable/">sphinx_rtd_theme</a> : thème ReadTheDocs</p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html">sphinx.ext.autodoc</a> : extraction de docs Python</p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html">sphinx.ext.napoleon</a> : docstrings Google/Numpy</p></li>
+</ul>
+</section>
+<section id="ressources-complementaires">
+<h2>Ressources complémentaires<a class="headerlink" href="#ressources-complementaires" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://blog.flozz.fr/2020/09/07/introduction-a-sphinx-un-outil-de-documentation-puissant/">Blog : Introduction à Sphinx sur FLOZz.fr</a></p></li>
+<li><p><a class="reference external" href="https://perso.liris.cnrs.fr/francoise.conil/documenter-son-projet-avec-sphinx/">Guide CNRS : Documenter son projet avec Sphinx</a></p></li>
+<li><p><a class="reference external" href="https://inspe-sciedu.gricad-pages.univ-grenoble-alpes.fr/reflexpro/syntaxe_sphinx.html">Bases de la syntaxe Sphinx — UGA</a></p></li>
+</ul>
+</section>
+<section id="en-resume">
+<h2>En résumé<a class="headerlink" href="#en-resume" title="Lien vers cette rubrique"></a></h2>
+<p>Sphinx est une solution reconnue pour produire une documentation technique, collaborative, et maintenable, et il s’adapte à de nombreux besoins modernes[1][5][8].</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="projet_explication.html" class="btn btn-neutral float-left" title="Presentation du projet" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="vm_mac.html" class="btn btn-neutral float-right" title="Télécharger une VM sur Mac" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2025, UHRY MUGNIER.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

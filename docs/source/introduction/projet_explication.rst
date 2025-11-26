@@ -1,0 +1,5 @@
+Presentation du projet
+======================
+
+L'objectif du projet est de piloter un robot Scara avec ROS2...
+

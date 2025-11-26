@@ -6,14 +6,20 @@
 UHRY_MUGNIER_Info_Indus_projet documentation
 ============================================
 
+Bienvenue sur la documentation du projet d'informatique industrielle du semestre 9 de MIQ5, réalisé par Émile Mugnier et Matthieu Uhry.
+
+Nous allons rendre compte de notre projet de la manière suivante.
+
 *******************
 Table des matières
 *******************
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Informatique Industrielle & ROS2
+   
+   introduction
+   realisation
 
-   c0_intro/001_index
-
+    
  
