@@ -1,0 +1,7 @@
+# Fichiers générés par Sphinx
+docs/build/
+
+# Fichiers macOS
+.DS_Store
+
+
