@@ -140,7 +140,7 @@
 </section>
 <section id="generation-de-la-description-urdf-du-pantographe">
 <h2>Génération de la description URDF du pantographe<a class="headerlink" href="#generation-de-la-description-urdf-du-pantographe" title="Lien vers cette rubrique"></a></h2>
-<p>Nous allons utiliser le modèle 3D au format step conçu et réalisé par M. Olivier PICCIN pour générer la description URDF du pantographe.</p>
+<p>Nous allons utiliser le modèle 3D au format step pour générer la description URDF du pantographe.</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/pantograph.png"><img alt="../_images/pantograph.png" src="../_images/pantograph.png" style="width: 60%;" />
 </a>
@@ -155,12 +155,11 @@
 <li><p>LINK4_ASM: le bras droit du pantographe. Dans l’URDF nous allons le nommer <code class="docutils literal notranslate"><span class="pre">link4</span></code>.</p></li>
 </ol>
 </div></blockquote>
-<p>Du point de vue URDF, nous aurons aussi besoin de définir l’outil de travail: le crayon et donc de le référencer par rapport à son support qui se trouve être sur l’avant bras gauche du pentographe (<code class="docutils literal notranslate"><span class="pre">link2</span></code>).</p>
 <p>Dans un fichier URDF, les modèles 3D sont utilisés à partir de fichiers collada (extension .dae).
 Il va donc falloir convertir notre modèle 3D au format step en un ensemble de 5 modèles 3D au format collada.</p>
 <section id="extraction-des-modeles-3d-en-step">
 <h3>Extraction des modèles 3D en step<a class="headerlink" href="#extraction-des-modeles-3d-en-step" title="Lien vers cette rubrique"></a></h3>
-<p>Pour extraire les modèles 3D au format step, nous pouvons utiliser le logiciel freecad.</p>
+<p>Pour extraire les modèles 3D au format step, nous pouvons utiliser le logiciel creo.</p>
 </section>
 <section id="conversion-des-modeles-3d-en-collada">
 <h3>Conversion des modèles 3D en collada<a class="headerlink" href="#conversion-des-modeles-3d-en-collada" title="Lien vers cette rubrique"></a></h3>

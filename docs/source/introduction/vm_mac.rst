@@ -68,7 +68,7 @@ Premiers pas et conseils
      sudo apt update && sudo apt upgrade
 
 - Pour partager des fichiers Mac ↔ Ubuntu, utilise la fonction "Shared Directory" de UTM (voir documentation officielle : `https://docs.getutm.app/ <https://docs.getutm.app/>`_).
-- Tu peux maintenant commencer l'installation de ROS2.'
+- Tu peux maintenant commencer l'installation de ROS2.
 
 Astuces supplémentaires
 -----------------------

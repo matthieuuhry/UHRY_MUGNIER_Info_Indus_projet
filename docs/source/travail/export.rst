@@ -72,7 +72,7 @@ Le projet fait partie d’un workspace ROS2, donc :
    ros2_build
 
 Cette commande compile l’ensemble des packages présents dans ``src`` et
-met à jour le dossier ``install`` du workspace.[web:411]
+met à jour le dossier ``install`` du workspace.
 
 3. Sourcer l’environnement
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -81,7 +81,7 @@ Après la compilation (et à chaque nouveau terminal) :
 
 .. code-block:: bash
 
-   source install/setup.bash   # ou setup.zsh selon le shell
+   source install/setup.bash
 
 Cela ajoute les packages du workspace (dont la description du robot)
 au chemin de recherche ROS2.

@@ -44,7 +44,7 @@ Ici :
 - ``base_link`` correspond à la base mécanique du pantographe ;
 - la géométrie est fournie par le mesh ``base.dae`` ;
 - la rotation ``rpy="1.5708 0 0"`` (≈ 90° autour de X) aligne le repère Creo
-  avec le repère ROS pour que la base soit orientée correctement dans RViz.[web:400]
+  avec le repère ROS pour que la base soit orientée correctement dans RViz.
 
 Fixation au monde
 ^^^^^^^^^^^^^^^^^

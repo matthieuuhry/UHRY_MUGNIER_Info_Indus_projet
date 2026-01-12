@@ -115,11 +115,7 @@ du projet sur la machine, avec tout l’historique Git.
 <p>Cloner un dépôt signifie :
 - télécharger tous les fichiers présents sur GitHub ;
 - récupérer également l’historique Git (commits, branches, etc.) ;
-- créer un dossier local lié au dépôt distant, ce qui permet ensuite de</p>
-<blockquote>
-<div><p>faire des <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> (récupérer les mises à jour du prof) et des
-<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> (envoyer nos modifications sur notre propre dépôt).</p>
-</div></blockquote>
+- créer un dossier local lié au dépôt distant, ce qui permet ensuite de faire des <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> (récupérer les mises à jour du prof) et des <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> (envoyer nos modifications sur notre propre dépôt).</p>
 <p>Après le clonage, on travaille toujours <strong>dans le dossier cloné</strong>, et non
 directement sur GitHub.</p>
 </section>
@@ -136,7 +132,7 @@ directement sur GitHub.</p>
 <section id="se-placer-dans-un-dossier-de-travail">
 <h3>2. Se placer dans un dossier de travail<a class="headerlink" href="#se-placer-dans-un-dossier-de-travail" title="Lien vers cette rubrique"></a></h3>
 <p>Dans un terminal :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src<span class="w">    </span><span class="c1"># exemple de dossier de travail</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/<span class="w">    </span><span class="c1"># exemple de dossier de travail</span>
 </pre></div>
 </div>
 </section>
@@ -168,7 +164,7 @@ ou les fichiers de lancement ROS2.</p>
 <section id="lien-avec-rviz-et-ros2">
 <h2>Lien avec RViz et ROS2<a class="headerlink" href="#lien-avec-rviz-et-ros2" title="Lien vers cette rubrique"></a></h2>
 <p>Une fois le dépôt cloné, il devient possible de :
-- construire le workspace ROS2 si nécessaire (par exemple avec <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code>) ;
+- construire le workspace ROS2 si nécessaire (par exemple avec <code class="docutils literal notranslate"><span class="pre">ros2_build</span></code>) ;
 - sourcer l’environnement (<code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">install/setup.bash</span></code> ou équivalent) ;
 - utiliser les fichiers de lancement fournis pour démarrer le robot dans RViz.</p>
 <p>Sans clonage initial, ces fichiers (<code class="docutils literal notranslate"><span class="pre">.urdf</span></code>, launch files, meshes, etc.)

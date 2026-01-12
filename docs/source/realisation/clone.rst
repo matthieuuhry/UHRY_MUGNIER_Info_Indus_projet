@@ -22,9 +22,7 @@ Qu’est‑ce que « cloner » un dépôt ?
 Cloner un dépôt signifie :
 - télécharger tous les fichiers présents sur GitHub ;
 - récupérer également l’historique Git (commits, branches, etc.) ;
-- créer un dossier local lié au dépôt distant, ce qui permet ensuite de
-  faire des ``git pull`` (récupérer les mises à jour du prof) et des
-  ``git push`` (envoyer nos modifications sur notre propre dépôt).
+- créer un dossier local lié au dépôt distant, ce qui permet ensuite de faire des ``git pull`` (récupérer les mises à jour du prof) et des ``git push`` (envoyer nos modifications sur notre propre dépôt).
 
 Après le clonage, on travaille toujours **dans le dossier cloné**, et non
 directement sur GitHub.
@@ -46,7 +44,7 @@ Dans un terminal :
 
 .. code-block:: bash
 
-   cd ~/ros2_ws/src    # exemple de dossier de travail
+   cd ~/ros2_ws/    # exemple de dossier de travail
 
 3. Lancer la commande de clonage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -83,7 +81,7 @@ Lien avec RViz et ROS2
 ----------------------
 
 Une fois le dépôt cloné, il devient possible de :
-- construire le workspace ROS2 si nécessaire (par exemple avec ``colcon build``) ;
+- construire le workspace ROS2 si nécessaire (par exemple avec ``ros2_build``) ;
 - sourcer l’environnement (``source install/setup.bash`` ou équivalent) ;
 - utiliser les fichiers de lancement fournis pour démarrer le robot dans RViz.
 

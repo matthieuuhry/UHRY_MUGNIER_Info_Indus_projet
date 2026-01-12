@@ -44,7 +44,7 @@ Description mécanique
 Génération de la description URDF du pantographe
 *************************************************
 
-Nous allons utiliser le modèle 3D au format step conçu et réalisé par M. Olivier PICCIN pour générer la description URDF du pantographe.
+Nous allons utiliser le modèle 3D au format step pour générer la description URDF du pantographe.
 
 .. figure:: img/pantograph.png
    :align: center
@@ -59,7 +59,6 @@ Il s'agit d'un assemblage comportant 5 pièces principales :
   #. LINK3_ASM: l'avant bras droit du pantographe. Dans l'URDF nous allons le nommer ``link3``.
   #. LINK4_ASM: le bras droit du pantographe. Dans l'URDF nous allons le nommer ``link4``.
 
-Du point de vue URDF, nous aurons aussi besoin de définir l'outil de travail: le crayon et donc de le référencer par rapport à son support qui se trouve être sur l'avant bras gauche du pentographe (``link2``).
 
 Dans un fichier URDF, les modèles 3D sont utilisés à partir de fichiers collada (extension .dae).
 Il va donc falloir convertir notre modèle 3D au format step en un ensemble de 5 modèles 3D au format collada.
@@ -68,7 +67,7 @@ Il va donc falloir convertir notre modèle 3D au format step en un ensemble de 5
 Extraction des modèles 3D en step
 ---------------------------------
 
-Pour extraire les modèles 3D au format step, nous pouvons utiliser le logiciel freecad.
+Pour extraire les modèles 3D au format step, nous pouvons utiliser le logiciel creo.
 
 
 Conversion des modèles 3D en collada

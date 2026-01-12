@@ -28,7 +28,7 @@ Principales fonctionnalités
 Pourquoi utiliser Sphinx ?
 --------------------------
 
-- **Standard de facto en Python** (utilisé pour Python, NumPy, ROS, etc.)
+- Standard en Python (utilisé pour Python, NumPy, ROS, etc.)
 - Versionnage et publication aisés (intégration avec GitHub Pages ou ReadTheDocs)
 - Gestion avancée des références croisées (indices, liens internes)
 - Adapté aussi pour les rapports de projet, guides techniques, TP/TD et même des livres entiers
