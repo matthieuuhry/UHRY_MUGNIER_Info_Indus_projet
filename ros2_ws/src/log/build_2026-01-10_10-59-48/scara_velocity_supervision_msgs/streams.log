@@ -1,0 +1,44 @@
+[0.026s] Invoking command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/grp4_muem/info_indus/ros2_ws/src/scara_velocity_supervision_msgs -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs
+[0.253s] -- The C compiler identification is GNU 13.3.0
+[0.437s] -- The CXX compiler identification is GNU 13.3.0
+[0.494s] -- Detecting C compiler ABI info
+[0.779s] -- Detecting C compiler ABI info - done
+[0.808s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.808s] -- Detecting C compile features
+[0.809s] -- Detecting C compile features - done
+[0.826s] -- Detecting CXX compiler ABI info
+[1.175s] -- Detecting CXX compiler ABI info - done
+[1.193s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.193s] -- Detecting CXX compile features
+[1.193s] -- Detecting CXX compile features - done
+[1.208s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.693s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.913s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.017s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[2.313s] -- Added test 'lint_cmake' to check CMake code style
+[2.315s] -- Added test 'xmllint' to check XML markup files
+[2.318s] -- Configuring done (2.3s)
+[2.323s] -- Generating done (0.0s)
+[2.326s] -- Build files have been written to: /home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs
+[2.338s] Invoked command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/grp4_muem/info_indus/ros2_ws/src/scara_velocity_supervision_msgs -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs
+[2.340s] Invoking command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs -- -j4 -l4
+[2.468s] Invoked command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs -- -j4 -l4
+[2.471s] Invoking command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs
+[2.517s] -- Install configuration: "Release"
+[2.518s] -- Execute custom install script
+[2.518s] -- Symlinking: /home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/ament_index/resource_index/package_run_dependencies/scara_velocity_supervision_msgs
+[2.540s] -- Symlinking: /home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/ament_index/resource_index/parent_prefix_path/scara_velocity_supervision_msgs
+[2.567s] -- Symlinking: /home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/environment/ament_prefix_path.sh
+[2.601s] -- Symlinking: /home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/environment/ament_prefix_path.dsv
+[2.626s] -- Symlinking: /home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/environment/path.sh
+[2.652s] -- Symlinking: /home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/environment/path.dsv
+[2.674s] -- Symlinking: /home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/local_setup.bash
+[2.702s] -- Symlinking: /home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/local_setup.sh
+[2.729s] -- Symlinking: /home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/local_setup.zsh
+[2.749s] -- Symlinking: /home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/local_setup.dsv
+[2.780s] -- Symlinking: /home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/package.dsv
+[2.815s] -- Symlinking: /home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/ament_index/resource_index/packages/scara_velocity_supervision_msgs
+[2.836s] -- Symlinking: /home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/cmake/scara_velocity_supervision_msgsConfig.cmake
+[2.860s] -- Symlinking: /home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/cmake/scara_velocity_supervision_msgsConfig-version.cmake
+[2.886s] -- Symlinking: /home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/package.xml
+[2.920s] Invoked command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs

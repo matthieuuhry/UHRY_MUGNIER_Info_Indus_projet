@@ -1,0 +1,32 @@
+[0.053s] Invoking command in '/home/grp4_muem/info_indus/ros2_ws/build/scara_joint_velocity_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/grp4_muem/info_indus/ros2_ws/build/scara_joint_velocity_controller -- -j4 -l4
+[0.271s] [100%] Built target scara_joint_velocity_controller
+[0.366s] Invoked command in '/home/grp4_muem/info_indus/ros2_ws/build/scara_joint_velocity_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/grp4_muem/info_indus/ros2_ws/build/scara_joint_velocity_controller -- -j4 -l4
+[0.368s] Invoking command in '/home/grp4_muem/info_indus/ros2_ws/build/scara_joint_velocity_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/grp4_muem/info_indus/ros2_ws/build/scara_joint_velocity_controller
+[0.406s] -- Install configuration: "Release"
+[0.409s] -- Execute custom install script
+[0.409s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller//controller_plugin.xml
+[0.409s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/include/scara_joint_velocity_controller/scara_joint_velocity_controller.hpp
+[0.410s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/include/scara_joint_velocity_controller/visibility_control.h
+[0.410s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/lib/libscara_joint_velocity_controller.so
+[0.410s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/environment/library_path.sh
+[0.410s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/environment/library_path.dsv
+[0.410s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/ament_index/resource_index/package_run_dependencies/scara_joint_velocity_controller
+[0.410s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/ament_index/resource_index/parent_prefix_path/scara_joint_velocity_controller
+[0.410s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/environment/ament_prefix_path.sh
+[0.410s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/environment/ament_prefix_path.dsv
+[0.411s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/environment/path.sh
+[0.411s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/environment/path.dsv
+[0.411s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/local_setup.bash
+[0.411s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/local_setup.sh
+[0.411s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/local_setup.zsh
+[0.411s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/local_setup.dsv
+[0.412s] -- Symlinking: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/package.dsv
+[0.445s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/ament_index/resource_index/packages/scara_joint_velocity_controller
+[0.445s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/ament_index/resource_index/controller_interface__pluginlib__plugin/scara_joint_velocity_controller
+[0.445s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.445s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.446s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/cmake/ament_cmake_export_libraries-extras.cmake
+[0.446s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/cmake/scara_joint_velocity_controllerConfig.cmake
+[0.446s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/cmake/scara_joint_velocity_controllerConfig-version.cmake
+[0.447s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/package.xml
+[0.451s] Invoked command in '/home/grp4_muem/info_indus/ros2_ws/build/scara_joint_velocity_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/grp4_muem/info_indus/ros2_ws/build/scara_joint_velocity_controller

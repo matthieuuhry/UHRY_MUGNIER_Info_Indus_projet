@@ -1,0 +1,1 @@
+/home/grp4_muem/info_indus/ros2_ws/build/scara_nodes/ament_cmake_environment_hooks/local_setup.bash
