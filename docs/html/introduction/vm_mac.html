@@ -1,0 +1,217 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installer Ubuntu Jammy Jellyfish sur Mac avec UTM &mdash; Documentation UHRY_MUGNIER_Info_Indus_projet 1</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a12a2fe1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=e6b791cb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Présentation du matériel utilisé" href="materiel.html" />
+    <link rel="prev" title="Le langage Sphinx" href="sphinx_langage.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            UHRY_MUGNIER_Info_Indus_projet
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Informatique Industrielle &amp; ROS2</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">Introduction</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="projet_explication.html">Presentation du projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sphinx_langage.html">Le langage Sphinx</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Installer Ubuntu Jammy Jellyfish sur Mac avec UTM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequis">Prérequis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#telechargement-des-outils">Téléchargement des outils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-de-la-machine-virtuelle">Création de la machine virtuelle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-d-ubuntu">Installation d’Ubuntu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#premiers-pas-et-conseils">Premiers pas et conseils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#astuces-supplementaires">Astuces supplémentaires</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#references-et-documentation">Références et documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="materiel.html">Présentation du matériel utilisé</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plateforme.html">Présentation de la plateforme mécanique</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../realisation.html">Utilisation de Github et prerequis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../travail.html">Travail réalisé</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">UHRY_MUGNIER_Info_Indus_projet</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../introduction.html">Introduction</a></li>
+      <li class="breadcrumb-item active">Installer Ubuntu Jammy Jellyfish sur Mac avec UTM</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/introduction/vm_mac.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installer-ubuntu-jammy-jellyfish-sur-mac-avec-utm">
+<h1>Installer Ubuntu Jammy Jellyfish sur Mac avec UTM<a class="headerlink" href="#installer-ubuntu-jammy-jellyfish-sur-mac-avec-utm" title="Lien vers cette rubrique"></a></h1>
+<p>Ce guide explique pas à pas comment installer <strong>Ubuntu 22.04 (Jammy Jellyfish)</strong> sur un Mac en utilisant l’outil de virtualisation UTM.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Cette machine virtuelle ne sera pas très puissante étant donné que l’on simule un processeur intel, elle permet cependant de travailler sur votre ordinateur perso depuis chez vous.</p>
+</div>
+<section id="prerequis">
+<h2>Prérequis<a class="headerlink" href="#prerequis" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p>Un Mac sous macOS (Apple Silicon ou Intel)</p></li>
+<li><p>20 Go d’espace disque disponible</p></li>
+<li><p>Connexion internet performante</p></li>
+</ul>
+</section>
+<section id="telechargement-des-outils">
+<h2>Téléchargement des outils<a class="headerlink" href="#telechargement-des-outils" title="Lien vers cette rubrique"></a></h2>
+<p><strong>a. Télécharger UTM</strong></p>
+<ul class="simple">
+<li><p>Site officiel : <a class="reference external" href="https://mac.getutm.app/">https://mac.getutm.app/</a></p></li>
+<li><p>Télécharge le fichier <cite>.dmg</cite> et installe UTM via le dossier « Applications ».</p></li>
+</ul>
+<p><strong>b. Télécharger Ubuntu ARM</strong></p>
+<ul class="simple">
+<li><p>Va sur : <a class="reference external" href="https://releases.ubuntu.com/jammy/">https://releases.ubuntu.com/jammy/</a></p></li>
+<li><p>Télécharge l’image <strong>ubuntu-22.04.4-desktop-amd64.iso</strong> (pour Intel) car l’image desktop qui permet donc d’avoir un bureau classique et pas uniquement un terminal n’existe pas en ARM64 (pour MAC).</p></li>
+</ul>
+</section>
+<section id="creation-de-la-machine-virtuelle">
+<h2>Création de la machine virtuelle<a class="headerlink" href="#creation-de-la-machine-virtuelle" title="Lien vers cette rubrique"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Lance UTM</strong> et clique sur le bouton « + » pour créer une nouvelle VM.</p></li>
+<li><p>Choisis <strong>Emulate</strong> pour simuler un processeur Intel et pouvoir lancer une image amd64.</p></li>
+<li><p>Sélectionne <strong>Linux</strong>.</p></li>
+<li><p>Configure les ressources :
+- <strong>Machine</strong> : Choisis Intel ICH9 based PC.
+- <strong>RAM</strong> : 4 à 8 Go selon la mémoire disponible.
+- <strong>CPU</strong> : Laisse le paramètre par défaut ou adapte.</p></li>
+<li><p>Ajoute ton ISO Ubuntu téléchargé dans le champ « CD/DVD ».</p></li>
+<li><p>Choisis au minimum 20 GB de stockage.</p></li>
+<li><p>Définis un chemin pour le dossier partagé si tu le souhaites.</p></li>
+<li><p>Donne un nom à ta VM (ex : <cite>Ubuntu 22.04</cite>).</p></li>
+<li><p>Sauvegarde et termine la configuration.</p></li>
+</ol>
+</section>
+<section id="installation-d-ubuntu">
+<h2>Installation d’Ubuntu<a class="headerlink" href="#installation-d-ubuntu" title="Lien vers cette rubrique"></a></h2>
+<ol class="arabic simple">
+<li><p>Démarre la VM (bouton « Play »).</p></li>
+<li><p>À l’écran d’accueil, sélectionne <em>Try or Install Ubuntu</em>.</p></li>
+<li><p>Suis l’assistant d’installation :
+- Choisis la langue d’installation.
+- Configure ton clavier.
+- Paramètre le fuseau horaire.
+- Renseigne le nom d’utilisateur et le mot de passe.
+- Choisis « Installation normale » ou minimale.
+- (Optionnel) Installe les logiciels tiers recommandés.</p></li>
+<li><p>Patiente jusqu’à la fin de l’installation (environ dix minutes).</p></li>
+</ol>
+</section>
+<section id="premiers-pas-et-conseils">
+<h2>Premiers pas et conseils<a class="headerlink" href="#premiers-pas-et-conseils" title="Lien vers cette rubrique"></a></h2>
+<ul>
+<li><p>Éjecte le disque ISO si besoin avant de redémarrer la VM (option via UTM).</p></li>
+<li><p>Connecte-toi à Ubuntu.</p></li>
+<li><p>Mets à jour le système :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+</pre></div>
+</div>
+</li>
+<li><p>Pour partager des fichiers Mac ↔ Ubuntu, utilise la fonction « Shared Directory » de UTM (voir documentation officielle : <a class="reference external" href="https://docs.getutm.app/">https://docs.getutm.app/</a>).</p></li>
+<li><p>Tu peux maintenant commencer l’installation de ROS2.”</p></li>
+</ul>
+</section>
+<section id="astuces-supplementaires">
+<h2>Astuces supplémentaires<a class="headerlink" href="#astuces-supplementaires" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p>Pour améliorer la résolution de l’affichage, ajuste les paramètres d’affichage dans Ubuntu ou dans UTM.</p></li>
+<li><p>Le réseau « Bridged » permet un accès Internet fiable dans la VM, mais le mode par défaut fonctionne généralement.</p></li>
+</ul>
+</section>
+<section id="references-et-documentation">
+<h2>Références et documentation<a class="headerlink" href="#references-et-documentation" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p>Documentation UTM (fr/en): <a class="reference external" href="https://docs.getutm.app/">https://docs.getutm.app/</a></p></li>
+<li><p>Téléchargement Ubuntu: <a class="reference external" href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a></p></li>
+<li><p>[Guide officiel Ubuntu](<a class="reference external" href="https://help.ubuntu.com/lts/installation-guide/">https://help.ubuntu.com/lts/installation-guide/</a>)</p></li>
+</ul>
+<p>—</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="sphinx_langage.html" class="btn btn-neutral float-left" title="Le langage Sphinx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="materiel.html" class="btn btn-neutral float-right" title="Présentation du matériel utilisé" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2025, UHRY MUGNIER.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

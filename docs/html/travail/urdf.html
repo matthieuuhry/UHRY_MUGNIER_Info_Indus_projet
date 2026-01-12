@@ -1,0 +1,403 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Description URDF du pantographe &mdash; Documentation UHRY_MUGNIER_Info_Indus_projet 1</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a12a2fe1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=e6b791cb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Cloner le projet et lancer la visualisation dans RViz" href="export.html" />
+    <link rel="prev" title="Génération des fichiers .dae pour RViz" href="repere.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            UHRY_MUGNIER_Info_Indus_projet
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Informatique Industrielle &amp; ROS2</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../realisation.html">Utilisation de Github et prerequis</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../travail.html">Travail réalisé</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="repere.html">Génération des fichiers .dae pour RViz</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Description URDF du pantographe</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#objectif-du-fichier-urdf">Objectif du fichier URDF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lien-world-et-base-du-robot">Lien world et base du robot</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lien-world">Lien <code class="docutils literal notranslate"><span class="pre">world</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#base-du-robot">Base du robot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fixation-au-monde">Fixation au monde</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#lien-et-articulation-1">Lien et articulation 1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lien-link1">Lien <code class="docutils literal notranslate"><span class="pre">link1</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#joint-joint1">Joint <code class="docutils literal notranslate"><span class="pre">joint1</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#lien-et-articulation-2">Lien et articulation 2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lien-link2">Lien <code class="docutils literal notranslate"><span class="pre">link2</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#joint-joint2">Joint <code class="docutils literal notranslate"><span class="pre">joint2</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#lien-et-articulation-3">Lien et articulation 3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lien-link3">Lien <code class="docutils literal notranslate"><span class="pre">link3</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#joint-joint3">Joint <code class="docutils literal notranslate"><span class="pre">joint3</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#lien-et-articulation-4">Lien et articulation 4</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lien-link4">Lien <code class="docutils literal notranslate"><span class="pre">link4</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#joint-joint4">Joint <code class="docutils literal notranslate"><span class="pre">joint4</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#methode-generale-pour-placer-les-joints-a-partir-de-creo">Méthode générale pour placer les joints à partir de Creo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rendu-final">Rendu final</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="export.html">Cloner le projet et lancer la visualisation dans RViz</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">UHRY_MUGNIER_Info_Indus_projet</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../travail.html">Travail réalisé</a></li>
+      <li class="breadcrumb-item active">Description URDF du pantographe</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/travail/urdf.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="description-urdf-du-pantographe">
+<h1>Description URDF du pantographe<a class="headerlink" href="#description-urdf-du-pantographe" title="Lien vers cette rubrique"></a></h1>
+<section id="objectif-du-fichier-urdf">
+<h2>Objectif du fichier URDF<a class="headerlink" href="#objectif-du-fichier-urdf" title="Lien vers cette rubrique"></a></h2>
+<p>Le fichier URDF présenté décrit la structure cinématique du pantographe
+utilisé dans le projet.
+Il permet :</p>
+<ul class="simple">
+<li><p>de lier les différentes mailles 3D (fichiers <code class="docutils literal notranslate"><span class="pre">.dae</span></code>) ;</p></li>
+<li><p>de définir les articulations (revolute / continuous) entre les maillons ;</p></li>
+<li><p>de positionner correctement le robot dans l’environnement RViz.</p></li>
+</ul>
+</section>
+<section id="lien-world-et-base-du-robot">
+<h2>Lien world et base du robot<a class="headerlink" href="#lien-world-et-base-du-robot" title="Lien vers cette rubrique"></a></h2>
+<section id="lien-world">
+<h3>Lien <code class="docutils literal notranslate"><span class="pre">world</span></code><a class="headerlink" href="#lien-world" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;link</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;world&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>Ce lien abstrait sert de référence fixe.
+Il ne possède pas de géométrie mais permet d’ancrer le robot dans la scène.</p>
+</section>
+<section id="base-du-robot">
+<h3>Base du robot<a class="headerlink" href="#base-du-robot" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;link</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;base_link&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;visual&gt;</span>
+<span class="w">    </span><span class="nt">&lt;geometry&gt;</span>
+<span class="w">      </span><span class="nt">&lt;mesh</span><span class="w"> </span><span class="na">filename=</span><span class="s">&quot;package://scara_description/urdf/meshes/base.dae&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/geometry&gt;</span>
+<span class="w">    </span><span class="nt">&lt;origin</span><span class="w"> </span><span class="na">xyz=</span><span class="s">&quot;0 0 0&quot;</span><span class="w"> </span><span class="na">rpy=</span><span class="s">&quot;1.5708 0 0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/visual&gt;</span>
+<span class="nt">&lt;/link&gt;</span>
+</pre></div>
+</div>
+<p>Ici :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">base_link</span></code> correspond à la base mécanique du pantographe ;</p></li>
+<li><p>la géométrie est fournie par le mesh <code class="docutils literal notranslate"><span class="pre">base.dae</span></code> ;</p></li>
+<li><p>la rotation <code class="docutils literal notranslate"><span class="pre">rpy=&quot;1.5708</span> <span class="pre">0</span> <span class="pre">0&quot;</span></code> (≈ 90° autour de X) aligne le repère Creo
+avec le repère ROS pour que la base soit orientée correctement dans RViz.[web:400]</p></li>
+</ul>
+</section>
+<section id="fixation-au-monde">
+<h3>Fixation au monde<a class="headerlink" href="#fixation-au-monde" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;joint</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;joint_base_to_pantograph&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;fixed&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;parent</span><span class="w"> </span><span class="na">link=</span><span class="s">&quot;world&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;child</span><span class="w"> </span><span class="na">link=</span><span class="s">&quot;base_link&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/joint&gt;</span>
+</pre></div>
+</div>
+<p>Ce joint <strong>fixe</strong> ancre définitivement la base au lien <code class="docutils literal notranslate"><span class="pre">world</span></code> :
+pas de mouvement possible, le pantographe est posé à un endroit fixe de la scène.</p>
+</section>
+</section>
+<section id="lien-et-articulation-1">
+<h2>Lien et articulation 1<a class="headerlink" href="#lien-et-articulation-1" title="Lien vers cette rubrique"></a></h2>
+<section id="lien-link1">
+<h3>Lien <code class="docutils literal notranslate"><span class="pre">link1</span></code><a class="headerlink" href="#lien-link1" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;link</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;visual&gt;</span>
+<span class="w">    </span><span class="nt">&lt;geometry&gt;</span>
+<span class="w">      </span><span class="nt">&lt;mesh</span><span class="w"> </span><span class="na">filename=</span><span class="s">&quot;package://scara_description/urdf/meshes/link1.dae&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/geometry&gt;</span>
+<span class="w">    </span><span class="nt">&lt;origin</span><span class="w"> </span><span class="na">xyz=</span><span class="s">&quot;0 0 0&quot;</span><span class="w"> </span><span class="na">rpy=</span><span class="s">&quot;0 0 0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/visual&gt;</span>
+<span class="nt">&lt;/link&gt;</span>
+</pre></div>
+</div>
+<p>Le maillon <code class="docutils literal notranslate"><span class="pre">link1</span></code> représente le premier bras du mécanisme, avec son mesh
+associé <code class="docutils literal notranslate"><span class="pre">link1.dae</span></code>.</p>
+</section>
+<section id="joint-joint1">
+<h3>Joint <code class="docutils literal notranslate"><span class="pre">joint1</span></code><a class="headerlink" href="#joint-joint1" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;joint</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;joint1&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;revolute&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;parent</span><span class="w"> </span><span class="na">link=</span><span class="s">&quot;base_link&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;child</span><span class="w">  </span><span class="na">link=</span><span class="s">&quot;link1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;origin</span><span class="w"> </span><span class="na">xyz=</span><span class="s">&quot;-0.08 -0.07 0.035&quot;</span><span class="w"> </span><span class="na">rpy=</span><span class="s">&quot;0 0 0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;axis</span><span class="w">   </span><span class="na">xyz=</span><span class="s">&quot;0 0 1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;limit</span><span class="w">  </span><span class="na">lower=</span><span class="s">&quot;-3.14&quot;</span><span class="w"> </span><span class="na">upper=</span><span class="s">&quot;3.14&quot;</span><span class="w"> </span><span class="na">effort=</span><span class="s">&quot;10&quot;</span><span class="w"> </span><span class="na">velocity=</span><span class="s">&quot;1.0&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/joint&gt;</span>
+</pre></div>
+</div>
+<p>Ce joint :</p>
+<ul class="simple">
+<li><p>relie <code class="docutils literal notranslate"><span class="pre">base_link</span></code> (parent) à <code class="docutils literal notranslate"><span class="pre">link1</span></code> (enfant) ;</p></li>
+<li><p>est de type <strong>revolute</strong> (rotation limitée autour d’un axe) ;</p></li>
+<li><p>a pour axe <code class="docutils literal notranslate"><span class="pre">xyz=&quot;0</span> <span class="pre">0</span> <span class="pre">1&quot;</span></code> : rotation autour de l’axe Z, comme une articulation
+de rotation plane classique.[web:407]</p></li>
+</ul>
+<p>Les coordonnées <code class="docutils literal notranslate"><span class="pre">origin</span> <span class="pre">xyz=&quot;-0.08</span> <span class="pre">-0.07</span> <span class="pre">0.035&quot;</span></code> définissent la position du
+centre de rotation de <code class="docutils literal notranslate"><span class="pre">link1</span></code> <strong>dans le repère de la base</strong>.
+Pour obtenir ces valeurs, les distances ont été mesurées dans Creo à l’aide de
+l’outil <em>Measure</em> (distances entre origines et repères), puis converties en
+mètres pour être renseignées précisément dans l’URDF.
+Ce travail de mesure garantit que le pivot dans RViz se trouve exactement au même
+endroit que l’axe mécanique réel.</p>
+</section>
+</section>
+<section id="lien-et-articulation-2">
+<h2>Lien et articulation 2<a class="headerlink" href="#lien-et-articulation-2" title="Lien vers cette rubrique"></a></h2>
+<section id="lien-link2">
+<h3>Lien <code class="docutils literal notranslate"><span class="pre">link2</span></code><a class="headerlink" href="#lien-link2" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;link</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;visual&gt;</span>
+<span class="w">    </span><span class="nt">&lt;geometry&gt;</span>
+<span class="w">      </span><span class="nt">&lt;mesh</span><span class="w"> </span><span class="na">filename=</span><span class="s">&quot;package://scara_description/urdf/meshes/link2.dae&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/geometry&gt;</span>
+<span class="w">    </span><span class="nt">&lt;origin</span><span class="w"> </span><span class="na">xyz=</span><span class="s">&quot;0 0 0&quot;</span><span class="w"> </span><span class="na">rpy=</span><span class="s">&quot;0 0 0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/visual&gt;</span>
+<span class="nt">&lt;/link&gt;</span>
+</pre></div>
+</div>
+<p>Ce maillon représente le second bras du pantographe.</p>
+</section>
+<section id="joint-joint2">
+<h3>Joint <code class="docutils literal notranslate"><span class="pre">joint2</span></code><a class="headerlink" href="#joint-joint2" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;joint</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;joint2&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;revolute&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;parent</span><span class="w"> </span><span class="na">link=</span><span class="s">&quot;link1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;child</span><span class="w">  </span><span class="na">link=</span><span class="s">&quot;link2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;origin</span><span class="w"> </span><span class="na">xyz=</span><span class="s">&quot;0.08 0 0.054&quot;</span><span class="w"> </span><span class="na">rpy=</span><span class="s">&quot;1.5708 0 0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;axis</span><span class="w">   </span><span class="na">xyz=</span><span class="s">&quot;0 1 0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;limit</span><span class="w">  </span><span class="na">lower=</span><span class="s">&quot;-3.14&quot;</span><span class="w"> </span><span class="na">upper=</span><span class="s">&quot;3.14&quot;</span><span class="w"> </span><span class="na">effort=</span><span class="s">&quot;10&quot;</span><span class="w"> </span><span class="na">velocity=</span><span class="s">&quot;1.0&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/joint&gt;</span>
+</pre></div>
+</div>
+<p>Caractéristiques :</p>
+<ul class="simple">
+<li><p>joint revolute entre <code class="docutils literal notranslate"><span class="pre">link1</span></code> et <code class="docutils literal notranslate"><span class="pre">link2</span></code> ;</p></li>
+<li><p>axe de rotation <code class="docutils literal notranslate"><span class="pre">xyz=&quot;0</span> <span class="pre">1</span> <span class="pre">0&quot;</span></code> : rotation autour de Y ;</p></li>
+<li><p>l’orientation initiale est corrigée par <code class="docutils literal notranslate"><span class="pre">rpy=&quot;1.5708</span> <span class="pre">0</span> <span class="pre">0&quot;</span></code> (rotation de 90°
+autour de X) pour aligner correctement le mesh avec l’axe mécanique.[web:407]</p></li>
+</ul>
+<p>Les valeurs de position <code class="docutils literal notranslate"><span class="pre">origin</span> <span class="pre">xyz=&quot;0.08</span> <span class="pre">0</span> <span class="pre">0.054&quot;</span></code> proviennent directement
+des mesures dans Creo : distance entre le repère de <code class="docutils literal notranslate"><span class="pre">link1</span></code> et l’axe de
+l’articulation 2.
+Ces mesures assurent que la deuxième articulation est physiquement cohérente,
+et que les deux bras se referment correctement dans la simulation.</p>
+</section>
+</section>
+<section id="lien-et-articulation-3">
+<h2>Lien et articulation 3<a class="headerlink" href="#lien-et-articulation-3" title="Lien vers cette rubrique"></a></h2>
+<section id="lien-link3">
+<h3>Lien <code class="docutils literal notranslate"><span class="pre">link3</span></code><a class="headerlink" href="#lien-link3" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;link</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;link3&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;visual&gt;</span>
+<span class="w">    </span><span class="nt">&lt;geometry&gt;</span>
+<span class="w">      </span><span class="nt">&lt;mesh</span><span class="w"> </span><span class="na">filename=</span><span class="s">&quot;package://scara_description/urdf/meshes/link4.dae&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/geometry&gt;</span>
+<span class="w">    </span><span class="nt">&lt;origin</span><span class="w"> </span><span class="na">xyz=</span><span class="s">&quot;0 0 0&quot;</span><span class="w"> </span><span class="na">rpy=</span><span class="s">&quot;0 0 0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/visual&gt;</span>
+<span class="nt">&lt;/link&gt;</span>
+</pre></div>
+</div>
+<p>Ici <code class="docutils literal notranslate"><span class="pre">link3</span></code> est associé au mesh <code class="docutils literal notranslate"><span class="pre">link4.dae</span></code> (choix de nomenclature spécifique
+au projet).</p>
+</section>
+<section id="joint-joint3">
+<h3>Joint <code class="docutils literal notranslate"><span class="pre">joint3</span></code><a class="headerlink" href="#joint-joint3" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;joint</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;joint3&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;revolute&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;parent</span><span class="w"> </span><span class="na">link=</span><span class="s">&quot;base_link&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;child</span><span class="w">  </span><span class="na">link=</span><span class="s">&quot;link3&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;origin</span><span class="w"> </span><span class="na">xyz=</span><span class="s">&quot;0.058 -0.07 0.035&quot;</span><span class="w"> </span><span class="na">rpy=</span><span class="s">&quot;0 0 0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;axis</span><span class="w">   </span><span class="na">xyz=</span><span class="s">&quot;0 0 1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;limit</span><span class="w">  </span><span class="na">lower=</span><span class="s">&quot;-3.14&quot;</span><span class="w"> </span><span class="na">upper=</span><span class="s">&quot;3.14&quot;</span><span class="w"> </span><span class="na">effort=</span><span class="s">&quot;10&quot;</span><span class="w"> </span><span class="na">velocity=</span><span class="s">&quot;1.0&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/joint&gt;</span>
+</pre></div>
+</div>
+<p>Comme pour <code class="docutils literal notranslate"><span class="pre">joint1</span></code> :</p>
+<ul class="simple">
+<li><p>joint revolute, axe <code class="docutils literal notranslate"><span class="pre">xyz=&quot;0</span> <span class="pre">0</span> <span class="pre">1&quot;</span></code> (rotation autour de Z) ;</p></li>
+<li><p>point d’attache défini par <code class="docutils literal notranslate"><span class="pre">origin</span> <span class="pre">xyz=&quot;0.058</span> <span class="pre">-0.07</span> <span class="pre">0.035&quot;</span></code>.</p></li>
+</ul>
+<p>Ce point a été obtenu avec l’outil de mesure de Creo en prenant les distances
+entre l’origine de la base et l’axe de rotation réel de ce bras.
+L’idée est que, lorsque l’angle du joint varie, la rotation se fasse exactement
+autour du bon axe géométrique dans RViz.</p>
+</section>
+</section>
+<section id="lien-et-articulation-4">
+<h2>Lien et articulation 4<a class="headerlink" href="#lien-et-articulation-4" title="Lien vers cette rubrique"></a></h2>
+<section id="lien-link4">
+<h3>Lien <code class="docutils literal notranslate"><span class="pre">link4</span></code><a class="headerlink" href="#lien-link4" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;link</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;link4&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;visual&gt;</span>
+<span class="w">    </span><span class="nt">&lt;geometry&gt;</span>
+<span class="w">      </span><span class="nt">&lt;mesh</span><span class="w"> </span><span class="na">filename=</span><span class="s">&quot;package://scara_description/urdf/meshes/link3.dae&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/geometry&gt;</span>
+<span class="w">    </span><span class="nt">&lt;origin</span><span class="w"> </span><span class="na">xyz=</span><span class="s">&quot;0 0 0&quot;</span><span class="w"> </span><span class="na">rpy=</span><span class="s">&quot;-1.57 0 0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/visual&gt;</span>
+<span class="nt">&lt;/link&gt;</span>
+</pre></div>
+</div>
+<p>Ce maillon utilise le mesh <code class="docutils literal notranslate"><span class="pre">link3.dae</span></code> et est réorienté par <code class="docutils literal notranslate"><span class="pre">rpy=&quot;-1.57</span> <span class="pre">0</span> <span class="pre">0&quot;</span></code>
+(≈ -90° autour de X) pour correspondre à la façon dont la pièce est montée
+dans l’assemblage réel.</p>
+</section>
+<section id="joint-joint4">
+<h3>Joint <code class="docutils literal notranslate"><span class="pre">joint4</span></code><a class="headerlink" href="#joint-joint4" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;joint</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;joint4&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;continuous&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;parent</span><span class="w"> </span><span class="na">link=</span><span class="s">&quot;link3&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;child</span><span class="w">  </span><span class="na">link=</span><span class="s">&quot;link4&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;origin</span><span class="w"> </span><span class="na">xyz=</span><span class="s">&quot;0.079 0 0.053&quot;</span><span class="w"> </span><span class="na">rpy=</span><span class="s">&quot;0 0 0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;axis</span><span class="w">   </span><span class="na">xyz=</span><span class="s">&quot;0 0 1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;limit</span><span class="w">  </span><span class="na">lower=</span><span class="s">&quot;-3.14&quot;</span><span class="w"> </span><span class="na">upper=</span><span class="s">&quot;3.14&quot;</span><span class="w"> </span><span class="na">effort=</span><span class="s">&quot;10&quot;</span><span class="w"> </span><span class="na">velocity=</span><span class="s">&quot;1.0&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/joint&gt;</span>
+</pre></div>
+</div>
+<p>Particularités :</p>
+<ul class="simple">
+<li><p>joint de type <strong>continuous</strong> : rotation libre (pas de butées physiques) ;</p></li>
+<li><p>axe de rotation autour de Z (<code class="docutils literal notranslate"><span class="pre">xyz=&quot;0</span> <span class="pre">0</span> <span class="pre">1&quot;</span></code>) ;</p></li>
+<li><p>position de l’articulation <code class="docutils literal notranslate"><span class="pre">origin</span> <span class="pre">xyz=&quot;0.079</span> <span class="pre">0</span> <span class="pre">0.053&quot;</span></code> calculée à partir
+des distances mesurées dans Creo entre le repère de <code class="docutils literal notranslate"><span class="pre">link3</span></code> et l’axe du
+dernier pivot.</p></li>
+</ul>
+<p>Une fois encore, l’outil <em>Measure</em> de Creo a été utilisé pour récupérer :</p>
+<ul class="simple">
+<li><p>l’offset en X, Y, Z par rapport au repère parent ;</p></li>
+<li><p>la cohérence des axes entre la CAO et le modèle URDF.</p></li>
+</ul>
+</section>
+</section>
+<section id="methode-generale-pour-placer-les-joints-a-partir-de-creo">
+<h2>Méthode générale pour placer les joints à partir de Creo<a class="headerlink" href="#methode-generale-pour-placer-les-joints-a-partir-de-creo" title="Lien vers cette rubrique"></a></h2>
+<p>Pour chaque articulation :</p>
+<ol class="arabic simple">
+<li><p><strong>Identifier le repère parent</strong> dans l’assemblage Creo (par exemple celui de
+<code class="docutils literal notranslate"><span class="pre">base_link</span></code> ou de <code class="docutils literal notranslate"><span class="pre">link1</span></code>).</p></li>
+<li><p><strong>Utiliser l’outil de mesure</strong> pour obtenir les coordonnées du centre
+géométrique de l’axe de rotation (en X, Y, Z) par rapport à ce repère.</p></li>
+<li><p><strong>Convertir les distances</strong> dans l’unité du URDF (mètres).</p></li>
+<li><p>Renseigner ces valeurs dans l’attribut <code class="docutils literal notranslate"><span class="pre">origin</span> <span class="pre">xyz=&quot;x</span> <span class="pre">y</span> <span class="pre">z&quot;</span></code> du joint
+correspondant.</p></li>
+<li><p>Vérifier visuellement dans RViz que :
+- la rotation se fait autour du bon axe ;
+- les maillons restent bien alignés lors des mouvements.</p></li>
+</ol>
+<p>Cette méthode garantit que le modèle URDF est fidèle à la CAO, et que les
+mouvements observés dans RViz reflètent correctement la cinématique réelle
+du pantographe.</p>
+</section>
+<section id="rendu-final">
+<h2>Rendu final<a class="headerlink" href="#rendu-final" title="Lien vers cette rubrique"></a></h2>
+<p>Finalement, ue fois le fichier complet, on peux lancer la visualisation avec la commande suivante:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>scara_bringup<span class="w"> </span>scara.launch.py
+</pre></div>
+</div>
+<p>Et le rendu est le suivant:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/urdf.png"><img alt="../_images/urdf.png" src="../_images/urdf.png" style="width: 60%;" />
+</a>
+</figure>
+<p>On peut apercevoir que la boucle du robot n’est pas fermée, cela est normal puisqu’il n’est pas possible de construire un robot parallèle avec RViz.</p>
+<p>Nous avons décidé ici de couper le robot sur la liaison du milieu, et les 4 autres liaison peuvent être pilotées indépendamment en vitesse.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="repere.html" class="btn btn-neutral float-left" title="Génération des fichiers .dae pour RViz" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="export.html" class="btn btn-neutral float-right" title="Cloner le projet et lancer la visualisation dans RViz" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2025, UHRY MUGNIER.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloner le dépôt GitHub du projet &mdash; Documentation UHRY_MUGNIER_Info_Indus_projet 1</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a12a2fe1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=e6b791cb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Publier la documentation Sphinx en ligne avec GitHub Pages" href="publication.html" />
+    <link rel="prev" title="Utiliser Git et GitHub dans le projet" href="github.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            UHRY_MUGNIER_Info_Indus_projet
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Informatique Industrielle &amp; ROS2</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../realisation.html">Utilisation de Github et prerequis</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="venv.html">Utilisation de l’environnement virtuel (.venv)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="github.html">Utiliser Git et GitHub dans le projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="github.html#explications-des-commandes-git-de-base">Explications des commandes Git de base</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Cloner le dépôt GitHub du projet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pourquoi-cloner-le-depot-du-professeur">Pourquoi cloner le dépôt du professeur ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#questce-que-cloner-un-depot">Qu’est‑ce que « cloner » un dépôt ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etapes-pour-cloner-le-projet-du-professeur">Étapes pour cloner le projet du professeur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#recuperer-lurl-du-depot">1. Récupérer l’URL du dépôt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#se-placer-dans-un-dossier-de-travail">2. Se placer dans un dossier de travail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lancer-la-commande-de-clonage">3. Lancer la commande de clonage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#entrer-dans-le-projet-clone">4. Entrer dans le projet cloné</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#lien-avec-rviz-et-ros2">Lien avec RViz et ROS2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bonnes-pratiques-apres-le-clonage">Bonnes pratiques après le clonage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="publication.html">Publier la documentation Sphinx en ligne avec GitHub Pages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../travail.html">Travail réalisé</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">UHRY_MUGNIER_Info_Indus_projet</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../realisation.html">Utilisation de Github et prerequis</a></li>
+      <li class="breadcrumb-item active">Cloner le dépôt GitHub du projet</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/realisation/clone.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cloner-le-depot-github-du-projet">
+<h1>Cloner le dépôt GitHub du projet<a class="headerlink" href="#cloner-le-depot-github-du-projet" title="Lien vers cette rubrique"></a></h1>
+<section id="pourquoi-cloner-le-depot-du-professeur">
+<h2>Pourquoi cloner le dépôt du professeur ?<a class="headerlink" href="#pourquoi-cloner-le-depot-du-professeur" title="Lien vers cette rubrique"></a></h2>
+<p>Pour commencer le projet, il fallait récupérer :
+- les fichiers de description du robot (dont le fichier <code class="docutils literal notranslate"><span class="pre">.urdf</span></code>) ;
+- les packages ROS2 fournis (lancement, configuration, etc.) ;
+- la structure déjà prête pour visualiser le robot dans RViz.</p>
+<p>Cloner le dépôt GitHub du professeur permet de créer <strong>une copie locale complète</strong>
+du projet sur la machine, avec tout l’historique Git.
+À partir de cette copie, on peut :
+- modifier le <code class="docutils literal notranslate"><span class="pre">.urdf</span></code> et les autres fichiers ;
+- lancer les nœuds ROS2 et visualiser le robot dans RViz ;
+- versionner ensuite nos propres modifications.</p>
+</section>
+<section id="questce-que-cloner-un-depot">
+<h2>Qu’est‑ce que « cloner » un dépôt ?<a class="headerlink" href="#questce-que-cloner-un-depot" title="Lien vers cette rubrique"></a></h2>
+<p>Cloner un dépôt signifie :
+- télécharger tous les fichiers présents sur GitHub ;
+- récupérer également l’historique Git (commits, branches, etc.) ;
+- créer un dossier local lié au dépôt distant, ce qui permet ensuite de</p>
+<blockquote>
+<div><p>faire des <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> (récupérer les mises à jour du prof) et des
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> (envoyer nos modifications sur notre propre dépôt).</p>
+</div></blockquote>
+<p>Après le clonage, on travaille toujours <strong>dans le dossier cloné</strong>, et non
+directement sur GitHub.</p>
+</section>
+<section id="etapes-pour-cloner-le-projet-du-professeur">
+<h2>Étapes pour cloner le projet du professeur<a class="headerlink" href="#etapes-pour-cloner-le-projet-du-professeur" title="Lien vers cette rubrique"></a></h2>
+<section id="recuperer-lurl-du-depot">
+<h3>1. Récupérer l’URL du dépôt<a class="headerlink" href="#recuperer-lurl-du-depot" title="Lien vers cette rubrique"></a></h3>
+<ul class="simple">
+<li><p>Aller sur la page GitHub du projet du professeur.</p></li>
+<li><p>Cliquer sur le bouton <strong>Code</strong>.</p></li>
+<li><p>Copier l’URL du dépôt (HTTPS ou SSH, selon la configuration).</p></li>
+</ul>
+</section>
+<section id="se-placer-dans-un-dossier-de-travail">
+<h3>2. Se placer dans un dossier de travail<a class="headerlink" href="#se-placer-dans-un-dossier-de-travail" title="Lien vers cette rubrique"></a></h3>
+<p>Dans un terminal :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src<span class="w">    </span><span class="c1"># exemple de dossier de travail</span>
+</pre></div>
+</div>
+</section>
+<section id="lancer-la-commande-de-clonage">
+<h3>3. Lancer la commande de clonage<a class="headerlink" href="#lancer-la-commande-de-clonage" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/prof/nom-du-projet.git
+</pre></div>
+</div>
+<p>ou, avec SSH :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:prof/nom-du-projet.git
+</pre></div>
+</div>
+<p>Git crée alors un dossier contenant tous les fichiers du projet :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls
+nom-du-projet/
+</pre></div>
+</div>
+</section>
+<section id="entrer-dans-le-projet-clone">
+<h3>4. Entrer dans le projet cloné<a class="headerlink" href="#entrer-dans-le-projet-clone" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>nom-du-projet
+git<span class="w"> </span>status
+</pre></div>
+</div>
+<p>À partir de là, on peut modifier les fichiers, par exemple le <code class="docutils literal notranslate"><span class="pre">.urdf</span></code>,
+ou les fichiers de lancement ROS2.</p>
+</section>
+</section>
+<section id="lien-avec-rviz-et-ros2">
+<h2>Lien avec RViz et ROS2<a class="headerlink" href="#lien-avec-rviz-et-ros2" title="Lien vers cette rubrique"></a></h2>
+<p>Une fois le dépôt cloné, il devient possible de :
+- construire le workspace ROS2 si nécessaire (par exemple avec <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code>) ;
+- sourcer l’environnement (<code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">install/setup.bash</span></code> ou équivalent) ;
+- utiliser les fichiers de lancement fournis pour démarrer le robot dans RViz.</p>
+<p>Sans clonage initial, ces fichiers (<code class="docutils literal notranslate"><span class="pre">.urdf</span></code>, launch files, meshes, etc.)
+ne seraient pas disponibles localement et il serait impossible de tester ou
+modifier le robot.</p>
+</section>
+<section id="bonnes-pratiques-apres-le-clonage">
+<h2>Bonnes pratiques après le clonage<a class="headerlink" href="#bonnes-pratiques-apres-le-clonage" title="Lien vers cette rubrique"></a></h2>
+<ul>
+<li><p>Ne pas modifier directement les fichiers sur GitHub : toujours passer par
+la copie locale clonée.</p></li>
+<li><p>Faire régulièrement :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>pull
+</pre></div>
+</div>
+<p>pour récupérer les éventuelles mises à jour du professeur.</p>
+</li>
+<li><p>Utiliser des branches pour les grosses modifications (par exemple une
+refonte du <code class="docutils literal notranslate"><span class="pre">.urdf</span></code> ou de la structure du package).</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="github.html" class="btn btn-neutral float-left" title="Utiliser Git et GitHub dans le projet" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="publication.html" class="btn btn-neutral float-right" title="Publier la documentation Sphinx en ligne avec GitHub Pages" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2025, UHRY MUGNIER.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

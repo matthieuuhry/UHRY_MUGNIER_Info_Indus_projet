@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Génération des fichiers .dae pour RViz &mdash; Documentation UHRY_MUGNIER_Info_Indus_projet 1</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a12a2fe1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=e6b791cb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Description URDF du pantographe" href="urdf.html" />
+    <link rel="prev" title="Travail réalisé" href="../travail.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            UHRY_MUGNIER_Info_Indus_projet
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Informatique Industrielle &amp; ROS2</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../realisation.html">Utilisation de Github et prerequis</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../travail.html">Travail réalisé</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Génération des fichiers .dae pour RViz</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#objectif">Objectif</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etape-1-export-depuis-creo-en-step">Étape 1 : export depuis Creo en STEP</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#preparer-les-reperes">Préparer les repères</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#procedure-dexport-step">Procédure d’export STEP</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#etape-2-conversion-en-dae-avec-freecad">Étape 2 : conversion en DAE avec FreeCAD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pourquoi-passer-par-freecad">Pourquoi passer par FreeCAD ?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#import-des-fichiers-step">Import des fichiers STEP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conversion-en-maillage-et-export-dae">Conversion en maillage et export DAE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#integration-dans-le-urdf-et-rviz">Intégration dans le URDF et RViz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#points-dattention-et-problemes-rencontres">Points d’attention et problèmes rencontrés</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="urdf.html">Description URDF du pantographe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export.html">Cloner le projet et lancer la visualisation dans RViz</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">UHRY_MUGNIER_Info_Indus_projet</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../travail.html">Travail réalisé</a></li>
+      <li class="breadcrumb-item active">Génération des fichiers .dae pour RViz</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/travail/repere.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="generation-des-fichiers-dae-pour-rviz">
+<h1>Génération des fichiers .dae pour RViz<a class="headerlink" href="#generation-des-fichiers-dae-pour-rviz" title="Lien vers cette rubrique"></a></h1>
+<section id="objectif">
+<h2>Objectif<a class="headerlink" href="#objectif" title="Lien vers cette rubrique"></a></h2>
+<p>Les fichiers <code class="docutils literal notranslate"><span class="pre">.dae</span></code> (format Collada) décrivent la géométrie 3D des pièces
+sous forme de maillages.
+Ils sont référencés dans le fichier URDF pour que RViz puisse afficher le robot
+de manière réaliste (au‑delà de simples primitives géométriques).</p>
+<p>Dans ce projet, les modèles 3D d’origine ont été créés dans Creo.
+Pour les exploiter dans RViz, nous avons suivi deux grandes étapes :</p>
+<ol class="arabic simple">
+<li><p>Exporter les pièces depuis Creo au format neutre STEP (<code class="docutils literal notranslate"><span class="pre">.step</span></code> / <code class="docutils literal notranslate"><span class="pre">.stp</span></code>) ;</p></li>
+<li><p>Convertir ces fichiers STEP en fichiers DAE (Collada) avec FreeCAD.</p></li>
+</ol>
+</section>
+<section id="etape-1-export-depuis-creo-en-step">
+<h2>Étape 1 : export depuis Creo en STEP<a class="headerlink" href="#etape-1-export-depuis-creo-en-step" title="Lien vers cette rubrique"></a></h2>
+<section id="preparer-les-reperes">
+<h3>Préparer les repères<a class="headerlink" href="#preparer-les-reperes" title="Lien vers cette rubrique"></a></h3>
+<p>Avant l’export, il est important de vérifier l’orientation de chaque pièce
+dans Creo :</p>
+<ul class="simple">
+<li><p>Choisir un repère cohérent avec le monde ROS (par exemple <code class="docutils literal notranslate"><span class="pre">Z</span></code> vers le haut,
+<code class="docutils literal notranslate"><span class="pre">X</span></code> vers l’avant, <code class="docutils literal notranslate"><span class="pre">Y</span></code> vers la gauche) ;</p></li>
+<li><p>Vérifier que la pièce est correctement positionnée par rapport à ce repère
+(origine logique, axes alignés).</p></li>
+</ul>
+<p>Une bonne définition des repères évite d’avoir des pièces tournées ou décalées
+dans RViz une fois intégrées dans le URDF.</p>
+</section>
+<section id="procedure-dexport-step">
+<h3>Procédure d’export STEP<a class="headerlink" href="#procedure-dexport-step" title="Lien vers cette rubrique"></a></h3>
+<p>Pour chaque pièce (ou sous‑ensemble) modélisée dans Creo :</p>
+<ol class="arabic simple">
+<li><p>Ouvrir la pièce ou l’assemblage.</p></li>
+<li><p>Vérifier le repère actif (orientation des axes).</p></li>
+<li><p>Utiliser la commande d’export :</p>
+<ul class="simple">
+<li><p>Menu d’export (type « Enregistrer sous » / « Exporter ») ;</p></li>
+<li><p>Choisir le format <strong>STEP</strong> (<code class="docutils literal notranslate"><span class="pre">.step</span></code> ou <code class="docutils literal notranslate"><span class="pre">.stp</span></code>).</p></li>
+</ul>
+</li>
+<li><p>Donner un nom explicite au fichier.</p></li>
+</ol>
+<p>Les fichiers STEP ainsi obtenus sont des représentations géométriques neutres,
+faciles à réimporter dans d’autres logiciels de CAO ou de conversion.</p>
+</section>
+</section>
+<section id="etape-2-conversion-en-dae-avec-freecad">
+<h2>Étape 2 : conversion en DAE avec FreeCAD<a class="headerlink" href="#etape-2-conversion-en-dae-avec-freecad" title="Lien vers cette rubrique"></a></h2>
+<section id="pourquoi-passer-par-freecad">
+<h3>Pourquoi passer par FreeCAD ?<a class="headerlink" href="#pourquoi-passer-par-freecad" title="Lien vers cette rubrique"></a></h3>
+<p>RViz attend un maillage (mesh) dans les formats supportés (STL, Collada DAE,
+etc.).
+FreeCAD sait :</p>
+<ul class="simple">
+<li><p>importer des fichiers STEP ;</p></li>
+<li><p>convertir la géométrie solide en maillage ;</p></li>
+<li><p>exporter ce maillage en <strong>Collada (.dae)</strong>, format très utilisé pour les
+visualisations 3D.</p></li>
+</ul>
+</section>
+<section id="import-des-fichiers-step">
+<h3>Import des fichiers STEP<a class="headerlink" href="#import-des-fichiers-step" title="Lien vers cette rubrique"></a></h3>
+<p>Pour chaque pièce :</p>
+<ol class="arabic simple">
+<li><p>Lancer FreeCAD.</p></li>
+<li><p>Créer un nouveau document ou utiliser un document vide.</p></li>
+<li><p>Importer le fichier STEP :</p>
+<ul class="simple">
+<li><p>Menu <strong>Fichier → Importer</strong> ;</p></li>
+<li><p>Sélectionner le fichier <code class="docutils literal notranslate"><span class="pre">.step</span></code> / <code class="docutils literal notranslate"><span class="pre">.stp</span></code> exporté depuis Creo.</p></li>
+</ul>
+</li>
+<li><p>Vérifier que la pièce apparaît correctement dans la vue 3D
+(orientation, taille, cohérence générale).</p></li>
+</ol>
+</section>
+<section id="conversion-en-maillage-et-export-dae">
+<h3>Conversion en maillage et export DAE<a class="headerlink" href="#conversion-en-maillage-et-export-dae" title="Lien vers cette rubrique"></a></h3>
+<p>Dans FreeCAD, la géométrie STEP doit être convertie en maillage avant
+l’export Collada :</p>
+<ol class="arabic simple">
+<li><p>Sélectionner l’objet importé dans l’arborescence.</p></li>
+<li><p>Utiliser l’outil de conversion en maillage :</p>
+<ul class="simple">
+<li><p>Menu <strong>Fichier → Exporter</strong> ;</p></li>
+<li><p>Choisir le format <strong>Collada (.dae)</strong> ;</p></li>
+<li><p>Nommer le fichier de manière cohérente, par exemple :</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">base.dae</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">link1.dae</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>Les fichiers <code class="docutils literal notranslate"><span class="pre">.dae</span></code> générés sont ensuite copiés dans un dossier dédié du
+package ROS2, typiquement :</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>mon_package_description/
+  meshes/
+    base.dae
+    bras_superieur.dae
+    pince.dae
+</pre></div>
+</div>
+</section>
+</section>
+<section id="integration-dans-le-urdf-et-rviz">
+<h2>Intégration dans le URDF et RViz<a class="headerlink" href="#integration-dans-le-urdf-et-rviz" title="Lien vers cette rubrique"></a></h2>
+<p>Dans le fichier URDF, chaque lien du robot peut référencer le fichier DAE
+correspondant, par exemple :</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;mesh</span><span class="w"> </span><span class="na">filename=</span><span class="s">&quot;package://mon_package_description/meshes/base.dae&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>Lors du lancement du robot dans RViz (via les fichiers de lancement ROS2), RViz :</p>
+<ul class="simple">
+<li><p>charge le URDF ;</p></li>
+<li><p>retrouve les chemins des maillages <code class="docutils literal notranslate"><span class="pre">.dae</span></code> ;</p></li>
+<li><p>affiche le robot avec les formes et orientations définies dans Creo.</p></li>
+</ul>
+</section>
+<section id="points-dattention-et-problemes-rencontres">
+<h2>Points d’attention et problèmes rencontrés<a class="headerlink" href="#points-dattention-et-problemes-rencontres" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p><strong>Orientation des pièces</strong> : si les repères ne sont pas cohérents dans Creo,
+les pièces peuvent apparaître retournées ou inclinées dans RViz.
+D’où l’importance de choisir les bons repères avant l’export.</p></li>
+<li><p><strong>Taille / échelle</strong> : vérifier l’unité utilisée (mm, m) dans Creo et
+FreeCAD pour éviter un robot trop grand ou trop petit dans RViz.</p></li>
+<li><p><strong>Emplacement des fichiers</strong> : les chemins utilisés dans le URDF doivent
+correspondre exactement à l’emplacement réel des <code class="docutils literal notranslate"><span class="pre">.dae</span></code> dans le package.</p></li>
+</ul>
+<p>En suivant cette chaîne Creo → STEP → FreeCAD → DAE, il devient possible
+d’obtenir une représentation fidèle du robot dans RViz à partir des modèles
+CAO d’origine.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../travail.html" class="btn btn-neutral float-left" title="Travail réalisé" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="urdf.html" class="btn btn-neutral float-right" title="Description URDF du pantographe" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2025, UHRY MUGNIER.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

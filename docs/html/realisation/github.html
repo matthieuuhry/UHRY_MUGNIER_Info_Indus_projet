@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utiliser Git et GitHub dans le projet &mdash; Documentation UHRY_MUGNIER_Info_Indus_projet 1</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a12a2fe1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=e6b791cb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Cloner le dépôt GitHub du projet" href="clone.html" />
+    <link rel="prev" title="Utilisation de l’environnement virtuel (.venv)" href="venv.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            UHRY_MUGNIER_Info_Indus_projet
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Informatique Industrielle &amp; ROS2</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../realisation.html">Utilisation de Github et prerequis</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="venv.html">Utilisation de l’environnement virtuel (.venv)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Utiliser Git et GitHub dans le projet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#objectifs">Objectifs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#initialisation-du-depot-local">Initialisation du dépôt local</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cloner-le-depot-existant-depuis-github">Cloner le dépôt existant depuis GitHub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#verifier-letat-du-depot">Vérifier l’état du dépôt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mettre-a-jour-sa-copie-locale">Mettre à jour sa copie locale</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gestion-des-fichiers-inutiles-venv-ds-store-etc">Gestion des fichiers inutiles (.venv, .DS_Store, etc.)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#probleme-rencontre">Problème rencontré</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ajouter-des-entrees-dans-gitignore">Ajouter des entrées dans .gitignore</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#retirer-un-dossier-deja-suivi-ex-venv">Retirer un dossier déjà suivi (ex. .venv)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#cycle-de-travail-quotidien">Cycle de travail quotidien</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#modifier-des-fichiers">Modifier des fichiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#preparer-le-commit">Préparer le commit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#envoyer-les-changements-sur-github">Envoyer les changements sur GitHub</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#travail-avec-des-branches">Travail avec des branches</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creer-une-branche-de-fonctionnalite">Créer une branche de fonctionnalité</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#travailler-sur-la-branche">Travailler sur la branche</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pousser-la-branche-sur-github">Pousser la branche sur GitHub</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#corriger-des-erreurs-de-suivi">Corriger des erreurs de suivi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#retirer-un-fichier-ajoute-par-erreur">Retirer un fichier ajouté par erreur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#retirer-un-dossier-entier-exemple-residus-dun-mauvais-build">Retirer un dossier entier (exemple : résidus d’un mauvais build)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#recuperer-les-dernieres-modifications-de-main">Récupérer les dernières modifications de main</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mettre-a-jour-sa-branche-locale">Mettre à jour sa branche locale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mettre-a-jour-une-branche-de-travail-par-rapport-a-main">Mettre à jour une branche de travail par rapport à main</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#explications-des-commandes-git-de-base">Explications des commandes Git de base</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#git-commit">git commit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#git-push">git push</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#git-pull">git pull</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#resume-du-cycle">Résumé du cycle</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="clone.html">Cloner le dépôt GitHub du projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publication.html">Publier la documentation Sphinx en ligne avec GitHub Pages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../travail.html">Travail réalisé</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">UHRY_MUGNIER_Info_Indus_projet</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../realisation.html">Utilisation de Github et prerequis</a></li>
+      <li class="breadcrumb-item active">Utiliser Git et GitHub dans le projet</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/realisation/github.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="utiliser-git-et-github-dans-le-projet">
+<h1>Utiliser Git et GitHub dans le projet<a class="headerlink" href="#utiliser-git-et-github-dans-le-projet" title="Lien vers cette rubrique"></a></h1>
+<section id="objectifs">
+<h2>Objectifs<a class="headerlink" href="#objectifs" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p>Versionner le code et la documentation.</p></li>
+<li><p>Travailler proprement sur des branches.</p></li>
+<li><p>Garder un historique clair des modifications.</p></li>
+<li><p>Corriger les erreurs (retours en arrière, suppression de fichiers suivis par erreur).</p></li>
+</ul>
+</section>
+<section id="initialisation-du-depot-local">
+<h2>Initialisation du dépôt local<a class="headerlink" href="#initialisation-du-depot-local" title="Lien vers cette rubrique"></a></h2>
+<section id="cloner-le-depot-existant-depuis-github">
+<h3>Cloner le dépôt existant depuis GitHub<a class="headerlink" href="#cloner-le-depot-existant-depuis-github" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:MonUser/MonDepot.git
+<span class="nb">cd</span><span class="w"> </span>MonDepot
+</pre></div>
+</div>
+</section>
+<section id="verifier-letat-du-depot">
+<h3>Vérifier l’état du dépôt<a class="headerlink" href="#verifier-letat-du-depot" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>status
+</pre></div>
+</div>
+<p>Cette commande permet de voir :
+- la branche courante (souvent <code class="docutils literal notranslate"><span class="pre">main</span></code>) ;
+- les fichiers modifiés ;
+- les fichiers non suivis (<code class="docutils literal notranslate"><span class="pre">Untracked</span> <span class="pre">files</span></code>).</p>
+</section>
+<section id="mettre-a-jour-sa-copie-locale">
+<h3>Mettre à jour sa copie locale<a class="headerlink" href="#mettre-a-jour-sa-copie-locale" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>pull
+</pre></div>
+</div>
+</section>
+</section>
+<section id="gestion-des-fichiers-inutiles-venv-ds-store-etc">
+<h2>Gestion des fichiers inutiles (.venv, .DS_Store, etc.)<a class="headerlink" href="#gestion-des-fichiers-inutiles-venv-ds-store-etc" title="Lien vers cette rubrique"></a></h2>
+<section id="probleme-rencontre">
+<h3>Problème rencontré<a class="headerlink" href="#probleme-rencontre" title="Lien vers cette rubrique"></a></h3>
+<p>Au départ, certains fichiers/dossiers n’auraient pas dû être versionnés :
+- l’environnement virtuel Python <code class="docutils literal notranslate"><span class="pre">.venv/</span></code> ;
+- des fichiers système comme <code class="docutils literal notranslate"><span class="pre">.DS_Store</span></code> sous macOS.</p>
+<p>Ils apparaissaient dans <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> comme modifiés ou suivis, ce qui polluait l’historique.</p>
+</section>
+<section id="ajouter-des-entrees-dans-gitignore">
+<h3>Ajouter des entrées dans .gitignore<a class="headerlink" href="#ajouter-des-entrees-dans-gitignore" title="Lien vers cette rubrique"></a></h3>
+<p>Exemple de contenu du fichier <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> :</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>.venv/
+__pycache__/
+.DS_Store
+</pre></div>
+</div>
+<p>Cela empêche ces fichiers d’être ajoutés à l’avenir.</p>
+</section>
+<section id="retirer-un-dossier-deja-suivi-ex-venv">
+<h3>Retirer un dossier déjà suivi (ex. .venv)<a class="headerlink" href="#retirer-un-dossier-deja-suivi-ex-venv" title="Lien vers cette rubrique"></a></h3>
+<p>Si <code class="docutils literal notranslate"><span class="pre">.venv</span></code> avait déjà été ajouté au dépôt, il fallait le retirer de l’index tout en le conservant localement :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>rm<span class="w"> </span>-r<span class="w"> </span>--cached<span class="w"> </span>.venv
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Retirer .venv du suivi Git&quot;</span>
+git<span class="w"> </span>push
+</pre></div>
+</div>
+<p>Même principe pour d’autres fichiers indésirables (par exemple <code class="docutils literal notranslate"><span class="pre">.DS_Store</span></code>) :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>rm<span class="w"> </span>--cached<span class="w"> </span>.DS_Store
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Retirer .DS_Store du dépôt&quot;</span>
+git<span class="w"> </span>push
+</pre></div>
+</div>
+</section>
+</section>
+<section id="cycle-de-travail-quotidien">
+<h2>Cycle de travail quotidien<a class="headerlink" href="#cycle-de-travail-quotidien" title="Lien vers cette rubrique"></a></h2>
+<section id="modifier-des-fichiers">
+<h3>Modifier des fichiers<a class="headerlink" href="#modifier-des-fichiers" title="Lien vers cette rubrique"></a></h3>
+<p>Après avoir travaillé (code, docs, config Sphinx), on peut vérifier les changements :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>status
+git<span class="w"> </span>diff<span class="w">         </span><span class="c1"># voir le détail des modifications</span>
+</pre></div>
+</div>
+</section>
+<section id="preparer-le-commit">
+<h3>Préparer le commit<a class="headerlink" href="#preparer-le-commit" title="Lien vers cette rubrique"></a></h3>
+<p>Plusieurs possibilités :</p>
+<ul>
+<li><p>Ajouter tous les fichiers suivis :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>.
+</pre></div>
+</div>
+</li>
+<li><p>Ou ajouter explicitement certains fichiers :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>docs/source/index.rst
+git<span class="w"> </span>add<span class="w"> </span>docs/source/venv.rst
+git<span class="w"> </span>add<span class="w"> </span>.gitignore
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Créer un commit avec un message explicite :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Documenter l&#39;utilisation de .venv et nettoyer .gitignore&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="envoyer-les-changements-sur-github">
+<h3>Envoyer les changements sur GitHub<a class="headerlink" href="#envoyer-les-changements-sur-github" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>push
+</pre></div>
+</div>
+<p>Si c’est la première fois sur une nouvelle branche :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>ma-branche
+</pre></div>
+</div>
+</section>
+</section>
+<section id="travail-avec-des-branches">
+<h2>Travail avec des branches<a class="headerlink" href="#travail-avec-des-branches" title="Lien vers cette rubrique"></a></h2>
+<section id="creer-une-branche-de-fonctionnalite">
+<h3>Créer une branche de fonctionnalité<a class="headerlink" href="#creer-une-branche-de-fonctionnalite" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>pull
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/docs-venv
+</pre></div>
+</div>
+</section>
+<section id="travailler-sur-la-branche">
+<h3>Travailler sur la branche<a class="headerlink" href="#travailler-sur-la-branche" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># modifications…</span>
+git<span class="w"> </span>status
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Rédiger la page sur l&#39;environnement virtuel&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="pousser-la-branche-sur-github">
+<h3>Pousser la branche sur GitHub<a class="headerlink" href="#pousser-la-branche-sur-github" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>feature/docs-venv
+</pre></div>
+</div>
+<p>Ensuite, la fusion vers <code class="docutils literal notranslate"><span class="pre">main</span></code> se fait via une <em>Pull Request</em> sur l’interface GitHub.</p>
+</section>
+</section>
+<section id="corriger-des-erreurs-de-suivi">
+<h2>Corriger des erreurs de suivi<a class="headerlink" href="#corriger-des-erreurs-de-suivi" title="Lien vers cette rubrique"></a></h2>
+<section id="retirer-un-fichier-ajoute-par-erreur">
+<h3>Retirer un fichier ajouté par erreur<a class="headerlink" href="#retirer-un-fichier-ajoute-par-erreur" title="Lien vers cette rubrique"></a></h3>
+<p>Si un fichier ne devrait pas être versionné :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>rm<span class="w"> </span>--cached<span class="w"> </span>chemin/du/fichier
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;chemin/du/fichier&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.gitignore
+git<span class="w"> </span>add<span class="w"> </span>.gitignore
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Arrêter de suivre fichier inutile&quot;</span>
+git<span class="w"> </span>push
+</pre></div>
+</div>
+</section>
+<section id="retirer-un-dossier-entier-exemple-residus-dun-mauvais-build">
+<h3>Retirer un dossier entier (exemple : résidus d’un mauvais build)<a class="headerlink" href="#retirer-un-dossier-entier-exemple-residus-dun-mauvais-build" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>rm<span class="w"> </span>-r<span class="w"> </span>--cached<span class="w"> </span>docs/_build
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;docs/_build/&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.gitignore
+git<span class="w"> </span>add<span class="w"> </span>.gitignore
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Ignorer les fichiers de build Sphinx&quot;</span>
+git<span class="w"> </span>push
+</pre></div>
+</div>
+</section>
+</section>
+<section id="recuperer-les-dernieres-modifications-de-main">
+<h2>Récupérer les dernières modifications de main<a class="headerlink" href="#recuperer-les-dernieres-modifications-de-main" title="Lien vers cette rubrique"></a></h2>
+<section id="mettre-a-jour-sa-branche-locale">
+<h3>Mettre à jour sa branche locale<a class="headerlink" href="#mettre-a-jour-sa-branche-locale" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>pull
+</pre></div>
+</div>
+</section>
+<section id="mettre-a-jour-une-branche-de-travail-par-rapport-a-main">
+<h3>Mettre à jour une branche de travail par rapport à main<a class="headerlink" href="#mettre-a-jour-une-branche-de-travail-par-rapport-a-main" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>feature/docs-venv
+git<span class="w"> </span>merge<span class="w"> </span>main<span class="w">   </span><span class="c1"># ou git rebase main, selon la politique de l&#39;équipe</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="explications-des-commandes-git-de-base">
+<h1>Explications des commandes Git de base<a class="headerlink" href="#explications-des-commandes-git-de-base" title="Lien vers cette rubrique"></a></h1>
+<section id="git-commit">
+<h2>git commit<a class="headerlink" href="#git-commit" title="Lien vers cette rubrique"></a></h2>
+<p>Un <em>commit</em> enregistre un « instantané » de l’état des fichiers suivis à un moment donné.</p>
+<ul class="simple">
+<li><p>Avant le commit, on sélectionne les fichiers avec <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>.</p></li>
+<li><p>Le commit crée un point dans l’historique avec un message explicite.</p></li>
+</ul>
+<p>Exemple :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>docs/source/venv.rst
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Expliquer l&#39;utilisation de l&#39;environnement virtuel .venv&quot;</span>
+</pre></div>
+</div>
+<p>Ici :
+- <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> prépare le fichier pour le prochain commit.
+- <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> enregistre ce changement dans l’historique local du dépôt.
+- Le commit reste <strong>local</strong> tant qu’on n’a pas fait de <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>.</p>
+</section>
+<section id="git-push">
+<h2>git push<a class="headerlink" href="#git-push" title="Lien vers cette rubrique"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> envoie les commits locaux vers le dépôt distant (GitHub).</p>
+<ul class="simple">
+<li><p>Sans <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>, les autres collaborateurs ne voient pas les derniers commits.</p></li>
+<li><p>On pousse généralement sur la même branche (<code class="docutils literal notranslate"><span class="pre">main</span></code> ou une branche de fonctionnalité).</p></li>
+</ul>
+<p>Exemple :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>push<span class="w">           </span><span class="c1"># sur une branche déjà configurée</span>
+<span class="c1"># ou la première fois sur une nouvelle branche :</span>
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>feature/docs-venv
+</pre></div>
+</div>
+<p>Ici :
+- <code class="docutils literal notranslate"><span class="pre">origin</span></code> est le nom par défaut du dépôt distant.
+- <code class="docutils literal notranslate"><span class="pre">feature/docs-venv</span></code> est le nom de la branche envoyée sur GitHub.
+- L’option <code class="docutils literal notranslate"><span class="pre">-u</span></code> mémorise le lien entre la branche locale et la branche distante.</p>
+</section>
+<section id="git-pull">
+<h2>git pull<a class="headerlink" href="#git-pull" title="Lien vers cette rubrique"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> récupère les derniers commits depuis GitHub et les fusionne dans la branche locale.</p>
+<ul class="simple">
+<li><p>À utiliser régulièrement avant de commencer à travailler.</p></li>
+<li><p>Permet de rester synchronisé avec les modifications des autres (ou celles faites depuis une autre machine).</p></li>
+</ul>
+<p>Exemple :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>pull
+</pre></div>
+</div>
+<p>Ici :
+- <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">main</span></code> place la copie locale sur la branche <code class="docutils literal notranslate"><span class="pre">main</span></code>.
+- <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> récupère depuis GitHub les nouveaux commits de <code class="docutils literal notranslate"><span class="pre">origin/main</span></code> et les fusionne dans la <code class="docutils literal notranslate"><span class="pre">main</span></code> locale.
+- Si des modifications locales entrent en conflit avec celles du distant, Git demande de résoudre les conflits avant de continuer.</p>
+</section>
+<section id="resume-du-cycle">
+<h2>Résumé du cycle<a class="headerlink" href="#resume-du-cycle" title="Lien vers cette rubrique"></a></h2>
+<p>Pour une petite modification simple sur <code class="docutils literal notranslate"><span class="pre">main</span></code> :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>pull<span class="w">                           </span><span class="c1"># mettre à jour la branche</span>
+<span class="c1"># modifier des fichiers…</span>
+git<span class="w"> </span>status<span class="w">                         </span><span class="c1"># vérifier l&#39;état</span>
+git<span class="w"> </span>add<span class="w"> </span>fichier1<span class="w"> </span>fichier2<span class="w">          </span><span class="c1"># préparer les fichiers</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Décrire la modif&quot;</span><span class="w">   </span><span class="c1"># enregistrer localement</span>
+git<span class="w"> </span>push<span class="w">                           </span><span class="c1"># envoyer sur GitHub</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="venv.html" class="btn btn-neutral float-left" title="Utilisation de l’environnement virtuel (.venv)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="clone.html" class="btn btn-neutral float-right" title="Cloner le dépôt GitHub du projet" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2025, UHRY MUGNIER.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
