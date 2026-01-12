@@ -4,10 +4,13 @@
 python3 -m venv .venv
 source .venv/bin/activate
 
-sphinx-build -M html docs/source docs/_build
+sphinx-build -M html docs/source docs/build
 rm -f docs/*.html docs/*.js docs/*.inv
 rm -rf docs/_static docs/_sources
 cp -R docs/_build/html/* docs/
 git add docs
 git commit -m "MAJ doc"
 git push
+
+sphinx-build -M html docs/source docs/build
+open docs/build/html/index.html
