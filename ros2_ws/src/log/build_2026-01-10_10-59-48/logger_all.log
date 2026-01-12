@@ -1,0 +1,586 @@
+[0.280s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--cmake-args', '-DCMAKE_BUILD_TYPE=Release', '--symlink-install']
+[0.281s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=['-DCMAKE_BUILD_TYPE=Release'], cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffff96d2d130>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff96ee9a90>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff96ee9a90>>, mixin_verb=('build',))
+[0.342s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.342s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.342s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.342s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.342s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.342s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.342s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/grp4_muem/info_indus/ros2_ws/src'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop) by extensions ['ignore', 'ignore_ament_install']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop) by extension 'ignore'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop) by extension 'ignore_ament_install'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop) by extensions ['colcon_pkg']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop) by extension 'colcon_pkg'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop) by extensions ['colcon_meta']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop) by extension 'colcon_meta'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop) by extensions ['ros']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop) by extension 'ros'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop) by extensions ['cmake', 'python']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop) by extension 'cmake'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop) by extension 'python'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop) by extensions ['python_setup_py']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop) by extension 'python_setup_py'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/build) by extensions ['ignore', 'ignore_ament_install']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/build) by extension 'ignore'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/build) ignored
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs) by extensions ['ignore', 'ignore_ament_install']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs) by extension 'ignore'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs) by extension 'ignore_ament_install'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs) by extensions ['colcon_pkg']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs) by extension 'colcon_pkg'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs) by extensions ['colcon_meta']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs) by extension 'colcon_meta'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs) by extensions ['ros']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs) by extension 'ros'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs) by extensions ['cmake', 'python']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs) by extension 'cmake'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs) by extension 'python'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs) by extensions ['python_setup_py']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs) by extension 'python_setup_py'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/about) by extensions ['ignore', 'ignore_ament_install']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/about) by extension 'ignore'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/about) by extension 'ignore_ament_install'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/about) by extensions ['colcon_pkg']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/about) by extension 'colcon_pkg'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/about) by extensions ['colcon_meta']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/about) by extension 'colcon_meta'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/about) by extensions ['ros']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/about) by extension 'ros'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/about) by extensions ['cmake', 'python']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/about) by extension 'cmake'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/about) by extension 'python'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/about) by extensions ['python_setup_py']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/about) by extension 'python_setup_py'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/getting-started) by extensions ['ignore', 'ignore_ament_install']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/getting-started) by extension 'ignore'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/getting-started) by extension 'ignore_ament_install'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/getting-started) by extensions ['colcon_pkg']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/getting-started) by extension 'colcon_pkg'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/getting-started) by extensions ['colcon_meta']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/getting-started) by extension 'colcon_meta'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/getting-started) by extensions ['ros']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/getting-started) by extension 'ros'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/getting-started) by extensions ['cmake', 'python']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/getting-started) by extension 'cmake'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/getting-started) by extension 'python'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/getting-started) by extensions ['python_setup_py']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/getting-started) by extension 'python_setup_py'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/images) by extensions ['ignore', 'ignore_ament_install']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/images) by extension 'ignore'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/images) by extension 'ignore_ament_install'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/images) by extensions ['colcon_pkg']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/images) by extension 'colcon_pkg'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/images) by extensions ['colcon_meta']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/images) by extension 'colcon_meta'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/images) by extensions ['ros']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/images) by extension 'ros'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/images) by extensions ['cmake', 'python']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/images) by extension 'cmake'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/images) by extension 'python'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/images) by extensions ['python_setup_py']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/images) by extension 'python_setup_py'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/tutorials) by extensions ['ignore', 'ignore_ament_install']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/tutorials) by extension 'ignore'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/tutorials) by extension 'ignore_ament_install'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/tutorials) by extensions ['colcon_pkg']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/tutorials) by extension 'colcon_pkg'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/tutorials) by extensions ['colcon_meta']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/tutorials) by extension 'colcon_meta'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/tutorials) by extensions ['ros']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/tutorials) by extension 'ros'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/tutorials) by extensions ['cmake', 'python']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/tutorials) by extension 'cmake'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/tutorials) by extension 'python'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/tutorials) by extensions ['python_setup_py']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/docs/tutorials) by extension 'python_setup_py'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/install) by extensions ['ignore', 'ignore_ament_install']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/install) by extension 'ignore'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/install) ignored
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/log) by extensions ['ignore', 'ignore_ament_install']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/log) by extension 'ignore'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/log) ignored
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/resources) by extensions ['ignore', 'ignore_ament_install']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/resources) by extension 'ignore'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/resources) by extension 'ignore_ament_install'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/resources) by extensions ['colcon_pkg']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/resources) by extension 'colcon_pkg'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/resources) by extensions ['colcon_meta']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/resources) by extension 'colcon_meta'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/resources) by extensions ['ros']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/resources) by extension 'ros'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/resources) by extensions ['cmake', 'python']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/resources) by extension 'cmake'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/resources) by extension 'python'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/resources) by extensions ['python_setup_py']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/resources) by extension 'python_setup_py'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_bringup) by extension 'ignore'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_bringup) by extension 'ignore_ament_install'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_bringup) by extensions ['colcon_pkg']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_bringup) by extension 'colcon_pkg'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_bringup) by extensions ['colcon_meta']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_bringup) by extension 'colcon_meta'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_bringup) by extensions ['ros']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_bringup) by extension 'ros'
+[0.391s] DEBUG:colcon.colcon_core.package_identification:Package 'ecat_ros2_workshop/scara_bringup' with type 'ros.ament_cmake' and name 'scara_bringup'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers) by extensions ['ignore', 'ignore_ament_install']
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers) by extension 'ignore'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers) by extension 'ignore_ament_install'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers) by extensions ['colcon_pkg']
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers) by extension 'colcon_pkg'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers) by extensions ['colcon_meta']
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers) by extension 'colcon_meta'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers) by extensions ['ros']
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers) by extension 'ros'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers) by extensions ['cmake', 'python']
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers) by extension 'cmake'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers) by extension 'python'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers) by extensions ['python_setup_py']
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers) by extension 'python_setup_py'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers/scara_joint_velocity_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers/scara_joint_velocity_controller) by extension 'ignore'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers/scara_joint_velocity_controller) by extension 'ignore_ament_install'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers/scara_joint_velocity_controller) by extensions ['colcon_pkg']
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers/scara_joint_velocity_controller) by extension 'colcon_pkg'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers/scara_joint_velocity_controller) by extensions ['colcon_meta']
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers/scara_joint_velocity_controller) by extension 'colcon_meta'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers/scara_joint_velocity_controller) by extensions ['ros']
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_controllers/scara_joint_velocity_controller) by extension 'ros'
+[0.393s] DEBUG:colcon.colcon_core.package_identification:Package 'ecat_ros2_workshop/scara_controllers/scara_joint_velocity_controller' with type 'ros.ament_cmake' and name 'scara_joint_velocity_controller'
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_description) by extensions ['ignore', 'ignore_ament_install']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_description) by extension 'ignore'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_description) by extension 'ignore_ament_install'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_description) by extensions ['colcon_pkg']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_description) by extension 'colcon_pkg'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_description) by extensions ['colcon_meta']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_description) by extension 'colcon_meta'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_description) by extensions ['ros']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_description) by extension 'ros'
+[0.394s] DEBUG:colcon.colcon_core.package_identification:Package 'ecat_ros2_workshop/scara_description' with type 'ros.ament_cmake' and name 'scara_description'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_hardware) by extensions ['ignore', 'ignore_ament_install']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_hardware) by extension 'ignore'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_hardware) by extension 'ignore_ament_install'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_hardware) by extensions ['colcon_pkg']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_hardware) by extension 'colcon_pkg'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_hardware) by extensions ['colcon_meta']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_hardware) by extension 'colcon_meta'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_hardware) by extensions ['ros']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_hardware) by extension 'ros'
+[0.396s] DEBUG:colcon.colcon_core.package_identification:Package 'ecat_ros2_workshop/scara_hardware' with type 'ros.ament_cmake' and name 'scara_hardware'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_nodes) by extensions ['ignore', 'ignore_ament_install']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_nodes) by extension 'ignore'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_nodes) by extension 'ignore_ament_install'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_nodes) by extensions ['colcon_pkg']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_nodes) by extension 'colcon_pkg'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_nodes) by extensions ['colcon_meta']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_nodes) by extension 'colcon_meta'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_nodes) by extensions ['ros']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(ecat_ros2_workshop/scara_nodes) by extension 'ros'
+[0.397s] DEBUG:colcon.colcon_core.package_identification:Package 'ecat_ros2_workshop/scara_nodes' with type 'ros.ament_cmake' and name 'scara_nodes'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(scara_velocity_supervision_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(scara_velocity_supervision_msgs) by extension 'ignore'
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(scara_velocity_supervision_msgs) by extension 'ignore_ament_install'
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(scara_velocity_supervision_msgs) by extensions ['colcon_pkg']
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(scara_velocity_supervision_msgs) by extension 'colcon_pkg'
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(scara_velocity_supervision_msgs) by extensions ['colcon_meta']
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(scara_velocity_supervision_msgs) by extension 'colcon_meta'
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(scara_velocity_supervision_msgs) by extensions ['ros']
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(scara_velocity_supervision_msgs) by extension 'ros'
+[0.398s] DEBUG:colcon.colcon_core.package_identification:Package 'scara_velocity_supervision_msgs' with type 'ros.ament_cmake' and name 'scara_velocity_supervision_msgs'
+[0.398s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.399s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.399s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.399s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.399s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.433s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.434s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.442s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 371 installed packages in /opt/ros/jazzy
+[0.445s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.519s] Level 5:colcon.colcon_core.verb:set package 'scara_bringup' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.519s] Level 5:colcon.colcon_core.verb:set package 'scara_bringup' build argument 'cmake_target' from command line to 'None'
+[0.519s] Level 5:colcon.colcon_core.verb:set package 'scara_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.519s] Level 5:colcon.colcon_core.verb:set package 'scara_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.519s] Level 5:colcon.colcon_core.verb:set package 'scara_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.519s] Level 5:colcon.colcon_core.verb:set package 'scara_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.519s] Level 5:colcon.colcon_core.verb:set package 'scara_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.519s] Level 5:colcon.colcon_core.verb:set package 'scara_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.519s] Level 5:colcon.colcon_core.verb:set package 'scara_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.519s] DEBUG:colcon.colcon_core.verb:Building package 'scara_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup', 'merge_install': False, 'path': '/home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_bringup', 'symlink_install': True, 'test_result_base': None}
+[0.519s] Level 5:colcon.colcon_core.verb:set package 'scara_description' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.520s] Level 5:colcon.colcon_core.verb:set package 'scara_description' build argument 'cmake_target' from command line to 'None'
+[0.520s] Level 5:colcon.colcon_core.verb:set package 'scara_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.520s] Level 5:colcon.colcon_core.verb:set package 'scara_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.520s] Level 5:colcon.colcon_core.verb:set package 'scara_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.520s] Level 5:colcon.colcon_core.verb:set package 'scara_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.520s] Level 5:colcon.colcon_core.verb:set package 'scara_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.520s] Level 5:colcon.colcon_core.verb:set package 'scara_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.520s] Level 5:colcon.colcon_core.verb:set package 'scara_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.520s] DEBUG:colcon.colcon_core.verb:Building package 'scara_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description', 'merge_install': False, 'path': '/home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_description', 'symlink_install': True, 'test_result_base': None}
+[0.520s] Level 5:colcon.colcon_core.verb:set package 'scara_joint_velocity_controller' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.520s] Level 5:colcon.colcon_core.verb:set package 'scara_joint_velocity_controller' build argument 'cmake_target' from command line to 'None'
+[0.520s] Level 5:colcon.colcon_core.verb:set package 'scara_joint_velocity_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.520s] Level 5:colcon.colcon_core.verb:set package 'scara_joint_velocity_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.520s] Level 5:colcon.colcon_core.verb:set package 'scara_joint_velocity_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.520s] Level 5:colcon.colcon_core.verb:set package 'scara_joint_velocity_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.520s] Level 5:colcon.colcon_core.verb:set package 'scara_joint_velocity_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.520s] Level 5:colcon.colcon_core.verb:set package 'scara_joint_velocity_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.520s] Level 5:colcon.colcon_core.verb:set package 'scara_joint_velocity_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.520s] DEBUG:colcon.colcon_core.verb:Building package 'scara_joint_velocity_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_joint_velocity_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller', 'merge_install': False, 'path': '/home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_controllers/scara_joint_velocity_controller', 'symlink_install': True, 'test_result_base': None}
+[0.521s] Level 5:colcon.colcon_core.verb:set package 'scara_nodes' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.521s] Level 5:colcon.colcon_core.verb:set package 'scara_nodes' build argument 'cmake_target' from command line to 'None'
+[0.521s] Level 5:colcon.colcon_core.verb:set package 'scara_nodes' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.521s] Level 5:colcon.colcon_core.verb:set package 'scara_nodes' build argument 'cmake_clean_cache' from command line to 'False'
+[0.521s] Level 5:colcon.colcon_core.verb:set package 'scara_nodes' build argument 'cmake_clean_first' from command line to 'False'
+[0.521s] Level 5:colcon.colcon_core.verb:set package 'scara_nodes' build argument 'cmake_force_configure' from command line to 'False'
+[0.521s] Level 5:colcon.colcon_core.verb:set package 'scara_nodes' build argument 'ament_cmake_args' from command line to 'None'
+[0.521s] Level 5:colcon.colcon_core.verb:set package 'scara_nodes' build argument 'catkin_cmake_args' from command line to 'None'
+[0.521s] Level 5:colcon.colcon_core.verb:set package 'scara_nodes' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.521s] DEBUG:colcon.colcon_core.verb:Building package 'scara_nodes' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_nodes', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes', 'merge_install': False, 'path': '/home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_nodes', 'symlink_install': True, 'test_result_base': None}
+[0.521s] Level 5:colcon.colcon_core.verb:set package 'scara_velocity_supervision_msgs' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.521s] Level 5:colcon.colcon_core.verb:set package 'scara_velocity_supervision_msgs' build argument 'cmake_target' from command line to 'None'
+[0.521s] Level 5:colcon.colcon_core.verb:set package 'scara_velocity_supervision_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.521s] Level 5:colcon.colcon_core.verb:set package 'scara_velocity_supervision_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.521s] Level 5:colcon.colcon_core.verb:set package 'scara_velocity_supervision_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.521s] Level 5:colcon.colcon_core.verb:set package 'scara_velocity_supervision_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.521s] Level 5:colcon.colcon_core.verb:set package 'scara_velocity_supervision_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.521s] Level 5:colcon.colcon_core.verb:set package 'scara_velocity_supervision_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.521s] Level 5:colcon.colcon_core.verb:set package 'scara_velocity_supervision_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.521s] DEBUG:colcon.colcon_core.verb:Building package 'scara_velocity_supervision_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs', 'merge_install': False, 'path': '/home/grp4_muem/info_indus/ros2_ws/src/scara_velocity_supervision_msgs', 'symlink_install': True, 'test_result_base': None}
+[0.522s] Level 5:colcon.colcon_core.verb:set package 'scara_hardware' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.522s] Level 5:colcon.colcon_core.verb:set package 'scara_hardware' build argument 'cmake_target' from command line to 'None'
+[0.522s] Level 5:colcon.colcon_core.verb:set package 'scara_hardware' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.522s] Level 5:colcon.colcon_core.verb:set package 'scara_hardware' build argument 'cmake_clean_cache' from command line to 'False'
+[0.522s] Level 5:colcon.colcon_core.verb:set package 'scara_hardware' build argument 'cmake_clean_first' from command line to 'False'
+[0.522s] Level 5:colcon.colcon_core.verb:set package 'scara_hardware' build argument 'cmake_force_configure' from command line to 'False'
+[0.522s] Level 5:colcon.colcon_core.verb:set package 'scara_hardware' build argument 'ament_cmake_args' from command line to 'None'
+[0.522s] Level 5:colcon.colcon_core.verb:set package 'scara_hardware' build argument 'catkin_cmake_args' from command line to 'None'
+[0.522s] Level 5:colcon.colcon_core.verb:set package 'scara_hardware' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.522s] DEBUG:colcon.colcon_core.verb:Building package 'scara_hardware' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_hardware', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware', 'merge_install': False, 'path': '/home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_hardware', 'symlink_install': True, 'test_result_base': None}
+[0.522s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.523s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.524s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_description' with build type 'ament_cmake'
+[0.524s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_description'
+[0.529s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.529s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.530s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.535s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_bringup' with build type 'ament_cmake'
+[0.536s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_bringup'
+[0.537s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.537s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.542s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_controllers/scara_joint_velocity_controller' with build type 'ament_cmake'
+[0.543s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_controllers/scara_joint_velocity_controller'
+[0.543s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.543s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.551s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_nodes' with build type 'ament_cmake'
+[0.551s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_nodes'
+[0.552s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.552s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.567s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_description -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description
+[0.580s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_bringup -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup
+[0.586s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_joint_velocity_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_controllers/scara_joint_velocity_controller -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller
+[0.606s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_nodes': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_nodes -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes
+[3.437s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_description -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description
+[3.438s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/grp4_muem/info_indus/ros2_ws/src/build/scara_description -- -j4 -l4
+[3.547s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/grp4_muem/info_indus/ros2_ws/src/build/scara_description -- -j4 -l4
+[3.575s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/grp4_muem/info_indus/ros2_ws/src/build/scara_description
+[3.955s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_nodes' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_nodes -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes
+[3.958s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_nodes': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/grp4_muem/info_indus/ros2_ws/src/build/scara_nodes -- -j4 -l4
+[4.090s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_nodes' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/grp4_muem/info_indus/ros2_ws/src/build/scara_nodes -- -j4 -l4
+[4.090s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_nodes': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/grp4_muem/info_indus/ros2_ws/src/build/scara_nodes
+[4.453s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scara_description)
+[4.455s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/grp4_muem/info_indus/ros2_ws/src/build/scara_description
+[4.472s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description' for CMake module files
+[4.473s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description' for CMake config files
+[4.473s] Level 1:colcon.colcon_core.shell:create_environment_hook('scara_description', 'cmake_prefix_path')
+[4.474s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/share/scara_description/hook/cmake_prefix_path.ps1'
+[4.477s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/share/scara_description/hook/cmake_prefix_path.dsv'
+[4.480s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/share/scara_description/hook/cmake_prefix_path.sh'
+[4.489s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/bin'
+[4.490s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/lib/pkgconfig/scara_description.pc'
+[4.491s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/lib/python3.12/site-packages'
+[4.492s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/bin'
+[4.494s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/share/scara_description/package.ps1'
+[4.496s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/share/scara_description/package.dsv'
+[4.498s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/share/scara_description/package.sh'
+[4.501s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/share/scara_description/package.bash'
+[4.505s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/share/scara_description/package.zsh'
+[4.507s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/share/colcon-core/packages/scara_description)
+[4.510s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scara_description)
+[4.510s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description' for CMake module files
+[4.513s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description' for CMake config files
+[4.514s] Level 1:colcon.colcon_core.shell:create_environment_hook('scara_description', 'cmake_prefix_path')
+[4.515s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/share/scara_description/hook/cmake_prefix_path.ps1'
+[4.516s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/share/scara_description/hook/cmake_prefix_path.dsv'
+[4.518s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/share/scara_description/hook/cmake_prefix_path.sh'
+[4.520s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/bin'
+[4.520s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/lib/pkgconfig/scara_description.pc'
+[4.521s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/lib/python3.12/site-packages'
+[4.522s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/bin'
+[4.523s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/share/scara_description/package.ps1'
+[4.526s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/share/scara_description/package.dsv'
+[4.528s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/share/scara_description/package.sh'
+[4.530s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/share/scara_description/package.bash'
+[4.531s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/share/scara_description/package.zsh'
+[4.532s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description/share/colcon-core/packages/scara_description)
+[4.533s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/grp4_muem/info_indus/ros2_ws/src/scara_velocity_supervision_msgs' with build type 'ament_cmake'
+[4.533s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/grp4_muem/info_indus/ros2_ws/src/scara_velocity_supervision_msgs'
+[4.534s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.534s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.562s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/grp4_muem/info_indus/ros2_ws/src/scara_velocity_supervision_msgs -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs
+[4.614s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scara_nodes)
+[4.615s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes' for CMake module files
+[4.619s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_nodes' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/grp4_muem/info_indus/ros2_ws/src/build/scara_nodes
+[4.622s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes' for CMake config files
+[4.624s] Level 1:colcon.colcon_core.shell:create_environment_hook('scara_nodes', 'cmake_prefix_path')
+[4.627s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/share/scara_nodes/hook/cmake_prefix_path.ps1'
+[4.631s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/share/scara_nodes/hook/cmake_prefix_path.dsv'
+[4.635s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/share/scara_nodes/hook/cmake_prefix_path.sh'
+[4.641s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/lib'
+[4.644s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/bin'
+[4.646s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/lib/pkgconfig/scara_nodes.pc'
+[4.648s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/lib/python3.12/site-packages'
+[4.653s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/bin'
+[4.656s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/share/scara_nodes/package.ps1'
+[4.658s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/share/scara_nodes/package.dsv'
+[4.666s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/share/scara_nodes/package.sh'
+[4.671s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/share/scara_nodes/package.bash'
+[4.682s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/share/scara_nodes/package.zsh'
+[4.688s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/share/colcon-core/packages/scara_nodes)
+[4.692s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scara_nodes)
+[4.694s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes' for CMake module files
+[4.698s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes' for CMake config files
+[4.699s] Level 1:colcon.colcon_core.shell:create_environment_hook('scara_nodes', 'cmake_prefix_path')
+[4.706s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/share/scara_nodes/hook/cmake_prefix_path.ps1'
+[4.712s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/share/scara_nodes/hook/cmake_prefix_path.dsv'
+[4.715s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/share/scara_nodes/hook/cmake_prefix_path.sh'
+[4.720s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/lib'
+[4.721s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/bin'
+[4.721s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/lib/pkgconfig/scara_nodes.pc'
+[4.722s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/lib/python3.12/site-packages'
+[4.723s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/bin'
+[4.724s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/share/scara_nodes/package.ps1'
+[4.727s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/share/scara_nodes/package.dsv'
+[4.731s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/share/scara_nodes/package.sh'
+[4.736s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/share/scara_nodes/package.bash'
+[4.739s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/share/scara_nodes/package.zsh'
+[4.745s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/grp4_muem/info_indus/ros2_ws/src/install/scara_nodes/share/colcon-core/packages/scara_nodes)
+[4.747s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_hardware' with build type 'ament_cmake'
+[4.748s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_hardware'
+[4.749s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.749s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.778s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_hardware': AMENT_PREFIX_PATH=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_hardware -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware
+[5.000s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_bringup -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup
+[5.000s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/grp4_muem/info_indus/ros2_ws/src/build/scara_bringup -- -j4 -l4
+[5.162s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/grp4_muem/info_indus/ros2_ws/src/build/scara_bringup -- -j4 -l4
+[5.166s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/grp4_muem/info_indus/ros2_ws/src/build/scara_bringup
+[5.798s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scara_bringup)
+[5.798s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup' for CMake module files
+[5.799s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup' for CMake config files
+[5.800s] Level 1:colcon.colcon_core.shell:create_environment_hook('scara_bringup', 'cmake_prefix_path')
+[5.802s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/share/scara_bringup/hook/cmake_prefix_path.ps1'
+[5.803s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/grp4_muem/info_indus/ros2_ws/src/build/scara_bringup
+[5.805s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/share/scara_bringup/hook/cmake_prefix_path.dsv'
+[5.807s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/share/scara_bringup/hook/cmake_prefix_path.sh'
+[5.809s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/bin'
+[5.810s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/lib/pkgconfig/scara_bringup.pc'
+[5.810s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/lib/python3.12/site-packages'
+[5.811s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/bin'
+[5.812s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/share/scara_bringup/package.ps1'
+[5.813s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/share/scara_bringup/package.dsv'
+[5.817s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/share/scara_bringup/package.sh'
+[5.819s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/share/scara_bringup/package.bash'
+[5.820s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/share/scara_bringup/package.zsh'
+[5.821s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/share/colcon-core/packages/scara_bringup)
+[5.822s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scara_bringup)
+[5.823s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup' for CMake module files
+[5.824s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup' for CMake config files
+[5.824s] Level 1:colcon.colcon_core.shell:create_environment_hook('scara_bringup', 'cmake_prefix_path')
+[5.825s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/share/scara_bringup/hook/cmake_prefix_path.ps1'
+[5.826s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/share/scara_bringup/hook/cmake_prefix_path.dsv'
+[5.827s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/share/scara_bringup/hook/cmake_prefix_path.sh'
+[5.829s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/bin'
+[5.830s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/lib/pkgconfig/scara_bringup.pc'
+[5.830s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/lib/python3.12/site-packages'
+[5.831s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/bin'
+[5.832s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/share/scara_bringup/package.ps1'
+[5.834s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/share/scara_bringup/package.dsv'
+[5.835s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/share/scara_bringup/package.sh'
+[5.838s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/share/scara_bringup/package.bash'
+[5.839s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/share/scara_bringup/package.zsh'
+[5.841s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/grp4_muem/info_indus/ros2_ws/src/install/scara_bringup/share/colcon-core/packages/scara_bringup)
+[6.210s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_joint_velocity_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_controllers/scara_joint_velocity_controller -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller
+[6.218s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_joint_velocity_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/grp4_muem/info_indus/ros2_ws/src/build/scara_joint_velocity_controller -- -j4 -l4
+[6.873s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/grp4_muem/info_indus/ros2_ws/src/scara_velocity_supervision_msgs -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs
+[6.875s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs -- -j4 -l4
+[7.004s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs -- -j4 -l4
+[7.006s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs
+[7.454s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scara_velocity_supervision_msgs)
+[7.454s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs' for CMake module files
+[7.455s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs
+[7.456s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs' for CMake config files
+[7.456s] Level 1:colcon.colcon_core.shell:create_environment_hook('scara_velocity_supervision_msgs', 'cmake_prefix_path')
+[7.456s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/hook/cmake_prefix_path.ps1'
+[7.457s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/hook/cmake_prefix_path.dsv'
+[7.457s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/hook/cmake_prefix_path.sh'
+[7.458s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/bin'
+[7.458s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/lib/pkgconfig/scara_velocity_supervision_msgs.pc'
+[7.459s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/lib/python3.12/site-packages'
+[7.459s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/bin'
+[7.459s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/package.ps1'
+[7.460s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/package.dsv'
+[7.461s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/package.sh'
+[7.461s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/package.bash'
+[7.461s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/package.zsh'
+[7.462s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/colcon-core/packages/scara_velocity_supervision_msgs)
+[7.462s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scara_velocity_supervision_msgs)
+[7.463s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs' for CMake module files
+[7.463s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs' for CMake config files
+[7.464s] Level 1:colcon.colcon_core.shell:create_environment_hook('scara_velocity_supervision_msgs', 'cmake_prefix_path')
+[7.464s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/hook/cmake_prefix_path.ps1'
+[7.465s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/hook/cmake_prefix_path.dsv'
+[7.465s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/hook/cmake_prefix_path.sh'
+[7.466s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/bin'
+[7.466s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/lib/pkgconfig/scara_velocity_supervision_msgs.pc'
+[7.466s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/lib/python3.12/site-packages'
+[7.467s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/bin'
+[7.467s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/package.ps1'
+[7.468s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/package.dsv'
+[7.469s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/package.sh'
+[7.469s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/package.bash'
+[7.470s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/scara_velocity_supervision_msgs/package.zsh'
+[7.470s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/grp4_muem/info_indus/ros2_ws/src/install/scara_velocity_supervision_msgs/share/colcon-core/packages/scara_velocity_supervision_msgs)
+[8.679s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_hardware' returned '0': AMENT_PREFIX_PATH=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/grp4_muem/info_indus/ros2_ws/src/ecat_ros2_workshop/scara_hardware -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware
+[8.680s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_hardware': AMENT_PREFIX_PATH=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/grp4_muem/info_indus/ros2_ws/src/build/scara_hardware -- -j4 -l4
+[22.841s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_hardware' returned '0': AMENT_PREFIX_PATH=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/grp4_muem/info_indus/ros2_ws/src/build/scara_hardware -- -j4 -l4
+[22.844s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_hardware': AMENT_PREFIX_PATH=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/grp4_muem/info_indus/ros2_ws/src/build/scara_hardware
+[23.440s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scara_hardware)
+[23.441s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware' for CMake module files
+[23.442s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_hardware' returned '0': AMENT_PREFIX_PATH=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/grp4_muem/info_indus/ros2_ws/src/install/scara_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/grp4_muem/info_indus/ros2_ws/src/build/scara_hardware
+[23.442s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware' for CMake config files
+[23.443s] Level 1:colcon.colcon_core.shell:create_environment_hook('scara_hardware', 'cmake_prefix_path')
+[23.443s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/hook/cmake_prefix_path.ps1'
+[23.444s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/hook/cmake_prefix_path.dsv'
+[23.444s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/hook/cmake_prefix_path.sh'
+[23.445s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/lib'
+[23.445s] Level 1:colcon.colcon_core.shell:create_environment_hook('scara_hardware', 'ld_library_path_lib')
+[23.445s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/hook/ld_library_path_lib.ps1'
+[23.446s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/hook/ld_library_path_lib.dsv'
+[23.446s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/hook/ld_library_path_lib.sh'
+[23.447s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/bin'
+[23.447s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/lib/pkgconfig/scara_hardware.pc'
+[23.447s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/lib/python3.12/site-packages'
+[23.448s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/bin'
+[23.448s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/package.ps1'
+[23.449s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/package.dsv'
+[23.449s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/package.sh'
+[23.450s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/package.bash'
+[23.450s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/package.zsh'
+[23.451s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/colcon-core/packages/scara_hardware)
+[23.451s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scara_hardware)
+[23.452s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware' for CMake module files
+[23.452s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware' for CMake config files
+[23.453s] Level 1:colcon.colcon_core.shell:create_environment_hook('scara_hardware', 'cmake_prefix_path')
+[23.453s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/hook/cmake_prefix_path.ps1'
+[23.454s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/hook/cmake_prefix_path.dsv'
+[23.454s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/hook/cmake_prefix_path.sh'
+[23.455s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/lib'
+[23.455s] Level 1:colcon.colcon_core.shell:create_environment_hook('scara_hardware', 'ld_library_path_lib')
+[23.456s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/hook/ld_library_path_lib.ps1'
+[23.456s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/hook/ld_library_path_lib.dsv'
+[23.457s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/hook/ld_library_path_lib.sh'
+[23.457s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/bin'
+[23.457s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/lib/pkgconfig/scara_hardware.pc'
+[23.457s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/lib/python3.12/site-packages'
+[23.458s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/bin'
+[23.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/package.ps1'
+[23.459s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/package.dsv'
+[23.460s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/package.sh'
+[23.460s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/package.bash'
+[23.461s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/scara_hardware/package.zsh'
+[23.461s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/grp4_muem/info_indus/ros2_ws/src/install/scara_hardware/share/colcon-core/packages/scara_hardware)
+[29.224s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_joint_velocity_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/grp4_muem/info_indus/ros2_ws/src/build/scara_joint_velocity_controller -- -j4 -l4
+[29.227s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_joint_velocity_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/grp4_muem/info_indus/ros2_ws/src/build/scara_joint_velocity_controller
+[29.779s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scara_joint_velocity_controller)
+[29.779s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller' for CMake module files
+[29.780s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/grp4_muem/info_indus/ros2_ws/src/build/scara_joint_velocity_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/grp4_muem/info_indus/ros2_ws/src/build/scara_joint_velocity_controller
+[29.780s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller' for CMake config files
+[29.781s] Level 1:colcon.colcon_core.shell:create_environment_hook('scara_joint_velocity_controller', 'cmake_prefix_path')
+[29.781s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/hook/cmake_prefix_path.ps1'
+[29.782s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/hook/cmake_prefix_path.dsv'
+[29.782s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/hook/cmake_prefix_path.sh'
+[29.783s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/lib'
+[29.783s] Level 1:colcon.colcon_core.shell:create_environment_hook('scara_joint_velocity_controller', 'ld_library_path_lib')
+[29.783s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/hook/ld_library_path_lib.ps1'
+[29.783s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/hook/ld_library_path_lib.dsv'
+[29.784s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/hook/ld_library_path_lib.sh'
+[29.784s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/bin'
+[29.784s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/lib/pkgconfig/scara_joint_velocity_controller.pc'
+[29.784s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/lib/python3.12/site-packages'
+[29.785s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/bin'
+[29.785s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/package.ps1'
+[29.786s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/package.dsv'
+[29.786s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/package.sh'
+[29.787s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/package.bash'
+[29.787s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/package.zsh'
+[29.787s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/colcon-core/packages/scara_joint_velocity_controller)
+[29.788s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scara_joint_velocity_controller)
+[29.788s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller' for CMake module files
+[29.789s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller' for CMake config files
+[29.790s] Level 1:colcon.colcon_core.shell:create_environment_hook('scara_joint_velocity_controller', 'cmake_prefix_path')
+[29.790s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/hook/cmake_prefix_path.ps1'
+[29.790s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/hook/cmake_prefix_path.dsv'
+[29.791s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/hook/cmake_prefix_path.sh'
+[29.791s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/lib'
+[29.792s] Level 1:colcon.colcon_core.shell:create_environment_hook('scara_joint_velocity_controller', 'ld_library_path_lib')
+[29.792s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/hook/ld_library_path_lib.ps1'
+[29.793s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/hook/ld_library_path_lib.dsv'
+[29.793s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/hook/ld_library_path_lib.sh'
+[29.793s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/bin'
+[29.794s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/lib/pkgconfig/scara_joint_velocity_controller.pc'
+[29.794s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/lib/python3.12/site-packages'
+[29.794s] Level 1:colcon.colcon_core.environment:checking '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/bin'
+[29.795s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/package.ps1'
+[29.795s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/package.dsv'
+[29.796s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/package.sh'
+[29.797s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/package.bash'
+[29.797s] INFO:colcon.colcon_core.shell:Creating package script '/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/scara_joint_velocity_controller/package.zsh'
+[29.798s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/grp4_muem/info_indus/ros2_ws/src/install/scara_joint_velocity_controller/share/colcon-core/packages/scara_joint_velocity_controller)
+[29.798s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[29.799s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[29.799s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[29.799s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[29.801s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[29.801s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/grp4_muem/info_indus/ros2_ws/src/install/local_setup.ps1'
+[29.803s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/grp4_muem/info_indus/ros2_ws/src/install/_local_setup_util_ps1.py'
+[29.806s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/grp4_muem/info_indus/ros2_ws/src/install/setup.ps1'
+[29.810s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/grp4_muem/info_indus/ros2_ws/src/install/local_setup.sh'
+[29.813s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/grp4_muem/info_indus/ros2_ws/src/install/_local_setup_util_sh.py'
+[29.815s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/grp4_muem/info_indus/ros2_ws/src/install/setup.sh'
+[29.818s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/grp4_muem/info_indus/ros2_ws/src/install/local_setup.bash'
+[29.821s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/grp4_muem/info_indus/ros2_ws/src/install/setup.bash'
+[29.824s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/grp4_muem/info_indus/ros2_ws/src/install/local_setup.zsh'
+[29.828s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/grp4_muem/info_indus/ros2_ws/src/install/setup.zsh'

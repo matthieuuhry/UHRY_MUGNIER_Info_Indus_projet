@@ -1,0 +1,1 @@
+/home/grp4_muem/info_indus/ros2_ws/src/build/scara_velocity_supervision_msgs/ament_cmake_core/scara_velocity_supervision_msgsConfig-version.cmake

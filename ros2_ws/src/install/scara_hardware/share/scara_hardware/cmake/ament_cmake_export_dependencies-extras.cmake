@@ -1,0 +1,1 @@
+/home/grp4_muem/info_indus/ros2_ws/src/build/scara_hardware/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake

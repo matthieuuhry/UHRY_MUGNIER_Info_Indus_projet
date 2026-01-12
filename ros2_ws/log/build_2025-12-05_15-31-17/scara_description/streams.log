@@ -1,0 +1,28 @@
+[0.065s] Invoking command in '/home/grp4_muem/info_indus/ros2_ws/build/scara_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/grp4_muem/info_indus/ros2_ws/build/scara_description -- -j4 -l4
+[0.244s] Invoked command in '/home/grp4_muem/info_indus/ros2_ws/build/scara_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/grp4_muem/info_indus/ros2_ws/build/scara_description -- -j4 -l4
+[0.268s] Invoking command in '/home/grp4_muem/info_indus/ros2_ws/build/scara_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/grp4_muem/info_indus/ros2_ws/build/scara_description
+[0.288s] -- Install configuration: "Release"
+[0.288s] -- Execute custom install script
+[0.290s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/scara_description/urdf/scara.urdf
+[0.291s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/scara_description/ros2_control/scara.ros2_control.urdf
+[0.292s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/scara_description/config/materials.urdf
+[0.292s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/scara_description/config/scara.config.xacro
+[0.294s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/scara_description/config/scara_controllers.yaml
+[0.296s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/scara_description/rviz/scara.rviz
+[0.300s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/scara_description/gazebo/scara.gazebo.xacro
+[0.300s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/ament_index/resource_index/package_run_dependencies/scara_description
+[0.301s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/ament_index/resource_index/parent_prefix_path/scara_description
+[0.301s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/scara_description/environment/ament_prefix_path.sh
+[0.301s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/scara_description/environment/ament_prefix_path.dsv
+[0.306s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/scara_description/environment/path.sh
+[0.308s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/scara_description/environment/path.dsv
+[0.308s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/scara_description/local_setup.bash
+[0.308s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/scara_description/local_setup.sh
+[0.308s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/scara_description/local_setup.zsh
+[0.308s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/scara_description/local_setup.dsv
+[0.308s] -- Symlinking: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/scara_description/package.dsv
+[0.347s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/ament_index/resource_index/packages/scara_description
+[0.347s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/scara_description/cmake/scara_descriptionConfig.cmake
+[0.347s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/scara_description/cmake/scara_descriptionConfig-version.cmake
+[0.347s] -- Up-to-date symlink: /home/grp4_muem/info_indus/ros2_ws/install/scara_description/share/scara_description/package.xml
+[0.407s] Invoked command in '/home/grp4_muem/info_indus/ros2_ws/build/scara_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/grp4_muem/info_indus/ros2_ws/build/scara_description

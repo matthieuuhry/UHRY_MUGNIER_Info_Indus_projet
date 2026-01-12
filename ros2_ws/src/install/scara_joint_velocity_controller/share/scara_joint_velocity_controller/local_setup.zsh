@@ -1,0 +1,1 @@
+/home/grp4_muem/info_indus/ros2_ws/src/build/scara_joint_velocity_controller/ament_cmake_environment_hooks/local_setup.zsh

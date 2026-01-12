@@ -1,0 +1,9 @@
+/home/grp4_muem/info_indus/ros2_ws/build/scara_bringup/CMakeFiles/uninstall.dir
+/home/grp4_muem/info_indus/ros2_ws/build/scara_bringup/CMakeFiles/scara_bringup_uninstall.dir
+/home/grp4_muem/info_indus/ros2_ws/build/scara_bringup/CMakeFiles/test.dir
+/home/grp4_muem/info_indus/ros2_ws/build/scara_bringup/CMakeFiles/edit_cache.dir
+/home/grp4_muem/info_indus/ros2_ws/build/scara_bringup/CMakeFiles/rebuild_cache.dir
+/home/grp4_muem/info_indus/ros2_ws/build/scara_bringup/CMakeFiles/list_install_components.dir
+/home/grp4_muem/info_indus/ros2_ws/build/scara_bringup/CMakeFiles/install.dir
+/home/grp4_muem/info_indus/ros2_ws/build/scara_bringup/CMakeFiles/install/local.dir
+/home/grp4_muem/info_indus/ros2_ws/build/scara_bringup/CMakeFiles/install/strip.dir
