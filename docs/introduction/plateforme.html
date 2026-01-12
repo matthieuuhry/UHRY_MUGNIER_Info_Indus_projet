@@ -1,0 +1,206 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Présentation de la plateforme mécanique &mdash; Documentation UHRY_MUGNIER_Info_Indus_projet 1</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a12a2fe1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=e6b791cb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="GitHub.html" />
+    <link rel="prev" title="Présentation du matériel utilisé" href="materiel.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            UHRY_MUGNIER_Info_Indus_projet
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Informatique Industrielle &amp; ROS2</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">Introduction</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="projet_explication.html">Presentation du projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sphinx_langage.html">Le langage Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vm_mac.html">Installer Ubuntu Jammy Jellyfish sur Mac avec UTM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="materiel.html">Présentation du matériel utilisé</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Présentation de la plateforme mécanique</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description-du-materiel-de-la-plateforme-pantographe">Description du matériel de la plateforme pantographe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#description-mecanique">Description mécanique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#generation-de-la-description-urdf-du-pantographe">Génération de la description URDF du pantographe</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#extraction-des-modeles-3d-en-step">Extraction des modèles 3D en step</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conversion-des-modeles-3d-en-collada">Conversion des modèles 3D en collada</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creation-du-fichier-urdf">Création du fichier URDF</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../realisation.html">Réalisation du projet</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">UHRY_MUGNIER_Info_Indus_projet</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../introduction.html">Introduction</a></li>
+      <li class="breadcrumb-item active">Présentation de la plateforme mécanique</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/introduction/plateforme.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="presentation-de-la-plateforme-mecanique">
+<h1>Présentation de la plateforme mécanique<a class="headerlink" href="#presentation-de-la-plateforme-mecanique" title="Lien vers cette rubrique"></a></h1>
+<p>La plateforme pantographe illustrée ci-dessous est conçue pour réaliser des trajectoires précises sur une surface plane, combinant simplicité mécanique et contrôle électronique.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/real_system_photo.png"><img alt="../_images/real_system_photo.png" src="../_images/real_system_photo.png" style="width: 60%;" />
+</a>
+</figure>
+<section id="description-du-materiel-de-la-plateforme-pantographe">
+<h2>Description du matériel de la plateforme pantographe<a class="headerlink" href="#description-du-materiel-de-la-plateforme-pantographe" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p>Composants principaux :</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p><strong>Bras robotiques imprimés en 3D :</strong></p>
+<ul class="simple">
+<li><p>Les bras articulés sont fabriqués à l’aide de l’impression 3D.</p></li>
+<li><p>Ils sont connectés via des liaisons de révolution.</p></li>
+</ul>
+</li>
+<li><p><strong>Servomoteurs Dynamixel AX-12A :</strong></p>
+<ul class="simple">
+<li><p>Deux servomoteurs <strong>Dynamixel AX-12A</strong> assurent le mouvement des bras robotiques.</p></li>
+<li><p>Ils permettent un contrôle précis des positions pour suivre les trajectoires programmées.</p></li>
+</ul>
+</li>
+<li><p><strong>Châssis en aluminium :</strong></p>
+<ul class="simple">
+<li><p>La structure repose sur deux plaques d’aluminium.</p></li>
+<li><p>La plaque supérieure supporte les bras et pivots, tandis que la plaque inférieure accueille les servomoteurs.</p></li>
+</ul>
+</li>
+<li><p><strong>Support central pour outil traceur :</strong></p>
+<ul class="simple">
+<li><p>Un emplacement central permet de fixer un outil, tel qu’un stylo, pour dessiner ou suivre des trajectoires sur une feuille.</p></li>
+</ul>
+</li>
+</ol>
+<p>Cette plateforme est idéale pour des applications de traçage ou pour l’étude de systèmes mécaniques à deux degrés de liberté.</p>
+</section>
+<section id="description-mecanique">
+<h2>Description mécanique<a class="headerlink" href="#description-mecanique" title="Lien vers cette rubrique"></a></h2>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/meca.png"><img alt="../_images/meca.png" src="../_images/meca.png" style="width: 60%;" />
+</a>
+</figure>
+</section>
+<section id="generation-de-la-description-urdf-du-pantographe">
+<h2>Génération de la description URDF du pantographe<a class="headerlink" href="#generation-de-la-description-urdf-du-pantographe" title="Lien vers cette rubrique"></a></h2>
+<p>Nous allons utiliser le modèle 3D au format step conçu et réalisé par M. Olivier PICCIN pour générer la description URDF du pantographe.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/pantograph.png"><img alt="../_images/pantograph.png" src="../_images/pantograph.png" style="width: 60%;" />
+</a>
+</figure>
+<p>Il s’agit d’un assemblage comportant 5 pièces principales :</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>BATI_ASM: le bâti de la strucuture du pantographe avec les 2 moteurs pas à pas. Dans l’URDF nous allons le nommer <code class="docutils literal notranslate"><span class="pre">base</span></code>.</p></li>
+<li><p>LINK1_ASM: le bras gauche du pantographe. Dans l’URDF nous allons le nommer <code class="docutils literal notranslate"><span class="pre">link1</span></code>.</p></li>
+<li><p>LINK2_ASM: l’avant bras gauche du pantographe. Dans l’URDF nous allons le nommer <code class="docutils literal notranslate"><span class="pre">link2</span></code>.</p></li>
+<li><p>LINK3_ASM: l’avant bras droit du pantographe. Dans l’URDF nous allons le nommer <code class="docutils literal notranslate"><span class="pre">link3</span></code>.</p></li>
+<li><p>LINK4_ASM: le bras droit du pantographe. Dans l’URDF nous allons le nommer <code class="docutils literal notranslate"><span class="pre">link4</span></code>.</p></li>
+</ol>
+</div></blockquote>
+<p>Du point de vue URDF, nous aurons aussi besoin de définir l’outil de travail: le crayon et donc de le référencer par rapport à son support qui se trouve être sur l’avant bras gauche du pentographe (<code class="docutils literal notranslate"><span class="pre">link2</span></code>).</p>
+<p>Dans un fichier URDF, les modèles 3D sont utilisés à partir de fichiers collada (extension .dae).
+Il va donc falloir convertir notre modèle 3D au format step en un ensemble de 5 modèles 3D au format collada.</p>
+<section id="extraction-des-modeles-3d-en-step">
+<h3>Extraction des modèles 3D en step<a class="headerlink" href="#extraction-des-modeles-3d-en-step" title="Lien vers cette rubrique"></a></h3>
+<p>Pour extraire les modèles 3D au format step, nous pouvons utiliser le logiciel freecad.</p>
+</section>
+<section id="conversion-des-modeles-3d-en-collada">
+<h3>Conversion des modèles 3D en collada<a class="headerlink" href="#conversion-des-modeles-3d-en-collada" title="Lien vers cette rubrique"></a></h3>
+<p>Pour convertir les modèles 3D en collada (dae), nous pouvons utiliser le logiciel freecad.</p>
+</section>
+<section id="creation-du-fichier-urdf">
+<h3>Création du fichier URDF<a class="headerlink" href="#creation-du-fichier-urdf" title="Lien vers cette rubrique"></a></h3>
+<p>Dans un fichier URDF les modèles 3D sont référencés par des balises <code class="docutils literal notranslate"><span class="pre">&lt;mesh&gt;</span></code>.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="materiel.html" class="btn btn-neutral float-left" title="Présentation du matériel utilisé" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="GitHub.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2025, UHRY MUGNIER.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

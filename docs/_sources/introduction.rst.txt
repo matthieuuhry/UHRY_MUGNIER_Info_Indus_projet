@@ -9,3 +9,7 @@ Cette introduction présente le contexte du projet, le langage Sphinx et comment
    introduction/projet_explication
    introduction/sphinx_langage
    introduction/vm_mac
+   introduction/materiel
+   introduction/plateforme
+   introduction/github
+   
