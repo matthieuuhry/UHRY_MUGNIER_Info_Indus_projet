@@ -12,7 +12,7 @@ git add docs
 git commit -m "MAJ doc"
 git push
 
-sphinx-build -M html docs/source docs/build
+sphinx-build -M html docs/source docs
 open docs/build/html/index.html
 git add docs
 git commit -m "MAJ doc"

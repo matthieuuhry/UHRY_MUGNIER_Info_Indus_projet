@@ -282,5 +282,30 @@ On peut apercevoir que la boucle du robot n'est pas fermée, cela est normal pui
 Nous avons décidé ici de couper le robot sur la liaison du milieu, et les 4 autres liaison peuvent être pilotées indépendamment en vitesse.
 
 
+URDF complet 
+-------------
+
+.. code-block:: bash
+
+   <?xml version = "1.0"?>
+   <robot Name = "Pantograph" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
+   <!-- Used for fixing robot to 'base_link' -->
+   <link name="world"/>
+
+ 
+   <!-- Base -->
+   <link name = "base_link">
+     <visual>
+       <geometry>
+         <mesh filename="package://scara_description/urdf/meshes/base.dae"/>
+       </geometry>    
+       <origin xyz = "0 0 0" rpy = "1.5708 0 0"/>
+     </visual>
+   </link>
+
+  
+
 
 

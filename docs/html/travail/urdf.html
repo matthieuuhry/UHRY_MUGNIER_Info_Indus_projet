@@ -79,6 +79,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#methode-generale-pour-placer-les-joints-a-partir-de-creo">Méthode générale pour placer les joints à partir de Creo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#rendu-final">Rendu final</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#urdf-complet">URDF complet</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="export.html">Cloner le projet et lancer la visualisation dans RViz</a></li>
@@ -366,6 +367,28 @@ du pantographe.</p>
 </figure>
 <p>On peut apercevoir que la boucle du robot n’est pas fermée, cela est normal puisqu’il n’est pas possible de construire un robot parallèle avec RViz.</p>
 <p>Nous avons décidé ici de couper le robot sur la liaison du milieu, et les 4 autres liaison peuvent être pilotées indépendamment en vitesse.</p>
+</section>
+<section id="urdf-complet">
+<h2>URDF complet<a class="headerlink" href="#urdf-complet" title="Lien vers cette rubrique"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;?xml<span class="w"> </span><span class="nv">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span>?&gt;
+&lt;robot<span class="w"> </span><span class="nv">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Pantograph&quot;</span><span class="w"> </span>xmlns:xacro<span class="o">=</span><span class="s2">&quot;http://www.ros.org/wiki/xacro&quot;</span>&gt;
+
+
+&lt;!--<span class="w"> </span>Used<span class="w"> </span><span class="k">for</span><span class="w"> </span>fixing<span class="w"> </span>robot<span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;base_link&#39;</span><span class="w"> </span>--&gt;
+&lt;link<span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="s2">&quot;world&quot;</span>/&gt;
+
+
+&lt;!--<span class="w"> </span>Base<span class="w"> </span>--&gt;
+&lt;link<span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;base_link&quot;</span>&gt;
+<span class="w">  </span>&lt;visual&gt;
+<span class="w">    </span>&lt;geometry&gt;
+<span class="w">      </span>&lt;mesh<span class="w"> </span><span class="nv">filename</span><span class="o">=</span><span class="s2">&quot;package://scara_description/urdf/meshes/base.dae&quot;</span>/&gt;
+<span class="w">    </span>&lt;/geometry&gt;
+<span class="w">    </span>&lt;origin<span class="w"> </span><span class="nv">xyz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;0 0 0&quot;</span><span class="w"> </span><span class="nv">rpy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;1.5708 0 0&quot;</span>/&gt;
+<span class="w">  </span>&lt;/visual&gt;
+&lt;/link&gt;
+</pre></div>
+</div>
 </section>
 </section>
 
